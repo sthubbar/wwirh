@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>P. Moree - Who&#x27;s Who in Riemann Hypothesis Research</title>
+<title>Other regions - Who&#x27;s Who in Riemann Hypothesis Research</title>
 <link rel="stylesheet" href="../styles.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.min.css">
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://cdn.datatables.net/2.1.8/js/dataTables.min.js"></script>
-<meta property="og:title" content="P. Moree - Who&#x27;s Who in Riemann Hypothesis Research">
+<meta property="og:title" content="Other regions - Who&#x27;s Who in Riemann Hypothesis Research">
 <meta property="og:description" content="A directory of the researchers most active on the Riemann hypothesis, ranked from arXiv preprint output and OpenAlex citation data, with zbMATH MSC classes 11M26 and 11M50 integrated.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://wwirh.org/people/p-moree">
+<meta property="og:url" content="https://wwirh.org/regions/other">
 <meta property="og:site_name" content="Who&#x27;s Who in Riemann Hypothesis Research">
 <meta name="twitter:card" content="summary">
 <meta name="description" content="A directory of the researchers most active on the Riemann hypothesis, ranked from arXiv preprint output and OpenAlex citation data, with zbMATH MSC classes 11M26 and 11M50 integrated.">
@@ -24,7 +24,7 @@
 <a href="../regions/north-america.html" class="">North America</a>
 <a href="../regions/europe.html" class="">Europe</a>
 <a href="../regions/asia.html" class="">Asia & Pacific</a>
-<a href="../regions/other.html" class="">Other regions</a>
+<a href="../regions/other.html" class="nav-active">Other regions</a>
 <a href="../in-memoriam.html" class="">In Memoriam</a>
 <a href="../genealogy.html" class="">Genealogy</a>
 <a href="../reading-list.html" class="">Reading List</a>
@@ -35,23 +35,27 @@
 <a href="../overlap.html" class="">Overlap</a></nav>
 </header>
 <main>
-<p class="subtitle"><a href="../top100.html">&larr; Back to the Top 100</a></p>
-<h1>P. Moree (#54)</h1>
-<p class="subtitle">Max Planck Institute for Mathematics (DE)</p>
+<h1>Other regions</h1>
+<p class="subtitle">Top 100 researchers based in Other regions</p>
 
-<table class="profile-table">
+<p>4 of the Top 100 researchers are based in Other regions.</p>
+
+
+<h2>Listing</h2>
+<table id="rtbl" class="display compact stripe hover" style="width:100%">
+<thead><tr><th>Rank</th><th>Name</th><th>Institution</th><th>Country</th></tr></thead>
 <tbody>
-<tr><td>Homepage</td><td>N/A</td></tr>
-<tr><td>arXiv</td><td><a href="https://arxiv.org/search/?searchtype=author&amp;query=P.+Moree">Author search</a></td></tr>
-<tr><td>Google Scholar</td><td><a href="https://scholar.google.com/scholar?q=P.+Moree+number+theory">Search results</a></td></tr>
-<tr><td>OpenAlex</td><td><a href="https://openalex.org/works?search=P.+Moree">Search works</a></td></tr>
-<tr><td>zbMATH</td><td><a href="https://zbmath.org/authors/?q=P.+Moree">Author search</a></td></tr>
-<tr><td>arXiv Riemann-hypothesis-topical papers</td><td>16</td></tr>
-<tr><td>Active years</td><td>N/A</td></tr>
+<tr><td>19</td><td><a href="../people/andres-chirre.html">Andrés Chirre</a></td><td>Pontificia Universidad Católica del Perú</td><td>PE</td></tr>
+<tr><td>37</td><td><a href="../people/zeev-rudnick.html">Zeev Rudnick</a></td><td>Tel Aviv University</td><td>IL</td></tr>
+<tr><td>45</td><td><a href="../people/emanuel-carneiro.html">Emanuel Carneiro</a></td><td>IMPA</td><td>BR</td></tr>
+<tr><td>66</td><td><a href="../people/luis-baez-duarte.html">Luis Baez-Duarte</a></td><td>Universidad Simón Bolívar</td><td>VE</td></tr>
 </tbody>
 </table>
-
-<p class="callout">Profile data is compiled from arXiv, OpenAlex, zbMATH, Wikidata, and Google Scholar, with the homepage link from a web search. Spotted an error, or would you prefer not to be listed? See <a href="../corrections.html">Corrections and removal</a> or email <a href="mailto:admin@wwirh.org">admin@wwirh.org</a>.</p>
+<script>
+$(document).ready(function() {
+  $('#rtbl').DataTable({ pageLength: 25, lengthMenu: [25, 50, 100], order: [[0, 'asc']] });
+});
+</script>
 
 </main>
 <footer>
