@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About - Who&#x27;s Who in Riemann Hypothesis Research</title>
+<link rel="stylesheet" href="./styles.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.min.css">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.datatables.net/2.1.8/js/dataTables.min.js"></script>
+<meta property="og:title" content="About - Who&#x27;s Who in Riemann Hypothesis Research">
+<meta property="og:description" content="A directory of the researchers most active on the Riemann hypothesis, ranked from arXiv preprint output and OpenAlex citation data, with zbMATH MSC classification being integrated.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://wwirh.org/about">
+<meta property="og:site_name" content="Who&#x27;s Who in Riemann Hypothesis Research">
+<meta name="twitter:card" content="summary">
+<meta name="description" content="A directory of the researchers most active on the Riemann hypothesis, ranked from arXiv preprint output and OpenAlex citation data, with zbMATH MSC classification being integrated.">
+</head>
+<body>
+<header class="site-header">
+  <div class="brand"><a href="./index.html">Who's Who in Riemann Hypothesis Research</a></div>
+  <nav><a href="./index.html" class="">Home</a>
+<a href="./top100.html" class="">Top 100</a>
+<a href="./regions/north-america.html" class="">North America</a>
+<a href="./regions/europe.html" class="">Europe</a>
+<a href="./regions/asia.html" class="">Asia & Pacific</a>
+<a href="./in-memoriam.html" class="">In Memoriam</a>
+<a href="./genealogy.html" class="">Genealogy</a>
+<a href="./reading-list.html" class="">Reading List</a>
+<a href="./data.html" class="">Data</a>
+<a href="./methodology.html" class="">Methodology</a>
+<a href="./about.html" class="nav-active">About</a>
+<a href="./corrections.html" class="">Corrections</a></nav>
+</header>
+<main>
+<h1>About</h1>
+
+
+<h2>Why this site exists</h2>
+<p>The Riemann hypothesis is over 160 years old and still open: it is one of the Clay Millennium Prize Problems and arguably the most famous unsolved problem in mathematics. The community working on it and on the wider theory of the zeros of zeta and L-functions is large but enumerable. This site is a starting point for anyone wanting to know who is working on the Riemann hypothesis today, where they are, and what they have been writing recently.</p>
+
+<h2>Who built it</h2>
+<p>Steve Hubbard built this as a sister project to <a href="https://wwigr.org">Who's Who in Goldbach Research</a>, using the same open pipeline and documented methodology. Suggestions, corrections, and additions are welcome.</p>
+
+<h2>Contact</h2>
+<p>Questions, corrections, or additions: <a href="mailto:admin@wwirh.org">admin@wwirh.org</a>.</p>
+
+<h2>Sources of error</h2>
+<ul>
+<li><strong>Surname matching is fragile.</strong> Mathematicians with common surnames may be conflated. The pipeline handles the worst cases but misses are possible.</li>
+<li><strong>Citation counts are influenced by adjacent fields.</strong> Riemann-hypothesis work overlaps with random matrix theory, analytic number theory, and mathematical physics, so a researcher whose work bridges those fields may rank higher purely because those fields cite more. The OpenAlex term <code>random matrix</code> in particular pulls in wireless and signal-processing engineers, so it is excluded from the OpenAlex queries.</li>
+<li><strong>Coverage is biased toward digital publishing.</strong> The Riemann hypothesis is a heavily arXiv-based field, which the pipeline indexes well, but some senior figures who publish mainly in journals are undercounted, and the zbMATH MSC layer that corrects for this is still being integrated.</li>
+<li><strong>The Top 100 is not a verdict.</strong> It is a starting point. Use it alongside MathSciNet, your advisor, and your own reading.</li>
+</ul>
+
+<h2>Acknowledgments</h2>
+<p>Data sources: <a href="https://arxiv.org">arXiv</a>, <a href="https://openalex.org">OpenAlex</a>, <a href="https://zbmath.org">zbMATH Open</a>.</p>
+
+<h2>License and reuse</h2>
+<p>The data on this site is built from public sources (arXiv, OpenAlex, zbMATH) under their respective license terms. The compiled list and methodology are released under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a>: feel free to reuse with attribution.</p>
+
+</main>
+<footer>
+<p>Maintained by Steve Hubbard (<a href="mailto:admin@wwirh.org">admin@wwirh.org</a>). Data sources: <a href="https://arxiv.org">arXiv</a>, <a href="https://openalex.org">OpenAlex</a>, <a href="https://zbmath.org">zbMATH Open</a>, <a href="https://www.mathgenealogy.org">Mathematics Genealogy Project</a>.</p>
+<p>Last built June 2026.</p>
+</footer>
+</body>
+</html>

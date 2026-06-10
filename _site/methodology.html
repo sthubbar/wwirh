@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Methodology - Who&#x27;s Who in Riemann Hypothesis Research</title>
+<link rel="stylesheet" href="./styles.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.min.css">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.datatables.net/2.1.8/js/dataTables.min.js"></script>
+<meta property="og:title" content="Methodology - Who&#x27;s Who in Riemann Hypothesis Research">
+<meta property="og:description" content="A directory of the researchers most active on the Riemann hypothesis, ranked from arXiv preprint output and OpenAlex citation data, with zbMATH MSC classification being integrated.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://wwirh.org/methodology">
+<meta property="og:site_name" content="Who&#x27;s Who in Riemann Hypothesis Research">
+<meta name="twitter:card" content="summary">
+<meta name="description" content="A directory of the researchers most active on the Riemann hypothesis, ranked from arXiv preprint output and OpenAlex citation data, with zbMATH MSC classification being integrated.">
+</head>
+<body>
+<header class="site-header">
+  <div class="brand"><a href="./index.html">Who's Who in Riemann Hypothesis Research</a></div>
+  <nav><a href="./index.html" class="">Home</a>
+<a href="./top100.html" class="">Top 100</a>
+<a href="./regions/north-america.html" class="">North America</a>
+<a href="./regions/europe.html" class="">Europe</a>
+<a href="./regions/asia.html" class="">Asia & Pacific</a>
+<a href="./in-memoriam.html" class="">In Memoriam</a>
+<a href="./genealogy.html" class="">Genealogy</a>
+<a href="./reading-list.html" class="">Reading List</a>
+<a href="./data.html" class="">Data</a>
+<a href="./methodology.html" class="nav-active">Methodology</a>
+<a href="./about.html" class="">About</a>
+<a href="./corrections.html" class="">Corrections</a></nav>
+</header>
+<main>
+<h1>Methodology</h1>
+<p class="subtitle">How the rankings are built</p>
+
+<p>This page documents how the Top 100 list is constructed, what's in the data, and what's deliberately out. The Riemann-hypothesis ranking uses the same three-source composite design as the sister Goldbach site (arXiv preprint output, OpenAlex topical citations, and zbMATH MSC classifications). The Riemann hypothesis is a heavily arXiv-based field, so the current ranking is built mainly from the arXiv signal, with OpenAlex contributing where it overlaps; the zbMATH MSC layer is being integrated.</p>
+
+<h2>Data sources</h2>
+
+<table>
+<thead><tr><th>Source</th><th>What it gives</th><th>Limitations</th></tr></thead>
+<tbody>
+<tr><td><strong>arXiv</strong> (math.NT)</td><td>Preprint-level: titles, abstracts, authors, dates, co-author graph</td><td>Biased toward people who post preprints. Senior figures who publish only in journals are undercounted.</td></tr>
+<tr><td><strong>OpenAlex</strong></td><td>Author-level: paper count, citations, affiliations, country</td><td>Concept tagging is noisy in math; surname-only matching can misidentify. The phrase <code>random matrix</code> pulls in wireless and signal-processing engineers, so it is excluded from the OpenAlex queries.</td></tr>
+<tr><td><strong>zbMATH Open</strong></td><td>Curated math review database; canonical author codes; editor-assigned MSC classification (we use the two Riemann-hypothesis-core classes)</td><td>Coverage of older non-Western mathematicians is the best of the three sources; the REST API is gated behind a one-time Terms-of-Use acceptance. This layer is being folded into the ranking.</td></tr>
+</tbody>
+</table>
+
+<h2>Pipeline</h2>
+
+<p class="callout"><strong>Title-weighting.</strong> A paper can mention the Riemann hypothesis without being about it, for example a paper that cites it in its introduction as a famous open problem. To separate genuine work from passing mentions, the arXiv and OpenAlex pipelines weight a keyword match by where it appears: a match in the paper <em>title</em> counts at full weight, and a match only in the <em>abstract</em> counts at half (a factor of 0.5). zbMATH is not title-weighted, because its documents are classified by human editors, so the subject class itself is the relevance signal.</p>
+
+<ol>
+<li><strong>arXiv pull</strong>: 15 search terms (Riemann hypothesis, Riemann zeta function, Dirichlet L-functions, critical line, critical strip, pair correlation, zero-density, zeros of the zeta function, nontrivial zeros, Selberg class, Mertens function, moments of the zeta function, Lindelof, Beurling-Nyman, and random matrix) restricted to the math.NT category. Each paper's contribution to an author is title-weighted as above. A co-authorship graph is built and eigenvector centrality is the second factor in an arXiv composite of <code>0.60 * pr(weighted papers) + 0.40 * pr(eigen)</code>. Authors with at least 3 topical papers qualify.</li>
+
+<li><strong>OpenAlex pull</strong>: 14 phrase queries (the arXiv terms minus <code>random matrix</code>, which without a category guard floods the results with wireless and random-matrix-theory engineers), with an author cap of 10 per work to remove physics megapapers. Works and their citations are title-weighted as above. Composite: <code>0.60 * pr(weighted works) + 0.40 * pr(weighted citations)</code>. Result: 137 qualifying authors. Because the Riemann hypothesis is so strongly an arXiv-preprint field, OpenAlex overlaps with only a handful of the top-ranked researchers directly; the others are carried by their arXiv signal.</li>
+
+<li><strong>zbMATH pull</strong>: documents tagged with either of the two Riemann-hypothesis-core MSC classes, 11M26 (zeros of zeta and L-functions and the Riemann hypothesis) or 11M50 (relations of the zeta function with random matrices and physics). The editor-assigned MSC classes correct a systematic gap in the other sources: pre-1995 number theorists and specialists who publish in journals with sparse arXiv presence. This pull is in progress and is being folded into the merged ranking.</li>
+
+<li><strong>Merge and scoring</strong>: the rankings are surname-deduplicated and joined. The available ranks are combined with a <strong>weighted order statistic</strong>: each researcher's ranks are sorted and weighted <code>0.70</code> on the best, <code>0.20</code> on the middle, and <code>0.10</code> on the worst. Sorting before weighting means the method rewards excellence in any one Riemann-hypothesis pipeline (a researcher who is top in zbMATH but absent from arXiv would still score well), while a researcher strong across all of them still finishes ahead. Lower combined score ranks higher. An earlier design simply summed the ranks, which punished anyone outstanding in one source but weak in another; the weighted order statistic fixes that.</li>
+
+<li><strong>Estimating a missing rank (interpolation)</strong>: a researcher ranked by only one of the pipelines is not given a flat penalty. To estimate a missing rank, we order the whole pool by a pipeline the researcher does appear in, then walk outward to the <strong>two nearest researchers above and the two nearest below</strong> who carry a real rank in the missing pipeline, and average those (up to four) values. One rule protects the scoring: the <code>0.70</code> top weight may only land on a <em>measured</em> rank, so an estimate can support a researcher's score but can never be their headline signal. Estimated ranks show in [square brackets] on the Top 100 table; measured ranks show plain.</li>
+
+<li><strong>Hand-curated edits</strong>: an exclusions file removes researchers the automated pipeline surfaced in error (see Audit decisions). The merge does not hand-place any researcher; everyone earns their rank from the pipeline scores.</li>
+</ol>
+
+<h2>Audit decisions</h2>
+
+<h3>Excluded</h3>
+<p>A small number of authors surfaced by the automated pipeline are removed by hand. Some work in unrelated fields, for example signal processing, wireless communications, or coding theory, and were pulled in by surname collisions or by the noisy <code>random matrix</code> topic before it was dropped from the OpenAlex queries. A few others are self-published authors whose output is not part of mainstream research. The specific names are kept internal: listing them here would only give them visibility, which is the opposite of the point.</p>
+
+<h2>What's not in this list</h2>
+<ul>
+<li><strong>Researchers without a strong digital footprint.</strong> The pipeline indexes arXiv well and OpenAlex moderately, so figures who publish mainly in journals are undercounted until the zbMATH MSC layer is fully integrated.</li>
+<li><strong>Subjective importance.</strong> A theorist whose entire body of Riemann-hypothesis work is one influential paper may rank lower than a productive researcher with many adjacent papers. We rank by output, not by depth.</li>
+<li><strong>Adjacent topics.</strong> The list covers the Riemann hypothesis and adjacent problems, so some of the 100 work mainly on related questions (pair correlation of zeros, moments of the zeta function, Dirichlet L-functions, the Selberg class, the random-matrix connection) rather than on the Riemann hypothesis directly. Title-weighting reduces, but does not eliminate, the appearance of researchers whose connection to the hypothesis itself is incidental.</li>
+</ul>
+
+</main>
+<footer>
+<p>Maintained by Steve Hubbard (<a href="mailto:admin@wwirh.org">admin@wwirh.org</a>). Data sources: <a href="https://arxiv.org">arXiv</a>, <a href="https://openalex.org">OpenAlex</a>, <a href="https://zbmath.org">zbMATH Open</a>, <a href="https://www.mathgenealogy.org">Mathematics Genealogy Project</a>.</p>
+<p>Last built June 2026.</p>
+</footer>
+</body>
+</html>
