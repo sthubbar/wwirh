@@ -3,19 +3,19 @@
   "n_top": 100,
   "unplaced": [
     "#17 Fujii, Akio",
-    "#36 Forrester, P. J.",
-    "#37 Jian Lin",
-    "#39 Hall, R. R.",
-    "#45 Omar, Sami",
-    "#47 Pavel Kramarenko-Byrd",
-    "#50 Richard Cespedes",
-    "#53 Christopher Pompetzki",
-    "#55 Mindy Lee",
-    "#57 Ki, Haseo",
-    "#68 Travis Raymond-Charlie Stone",
-    "#69 Amitkumar Mahedrakumar Joshi",
-    "#82 Timothy Gleason",
-    "#85 Jeremy Kun"
+    "#35 Forrester, P. J.",
+    "#36 Jian Lin",
+    "#38 Hall, R. R.",
+    "#43 Omar, Sami",
+    "#45 Pavel Kramarenko-Byrd",
+    "#48 Richard Cespedes",
+    "#51 Christopher Pompetzki",
+    "#53 Mindy Lee",
+    "#55 Ki, Haseo",
+    "#66 Travis Raymond-Charlie Stone",
+    "#67 Amitkumar Mahedrakumar Joshi",
+    "#80 Timothy Gleason",
+    "#83 Jeremy Kun"
   ],
   "maps": [
     {
@@ -40,7 +40,6 @@
         "David W. Farmer",
         "D. A. Goldston",
         "Masatoshi Suzuki",
-        "Karatsuba, A. A.",
         "Peng Gao",
         "Andrés Chirre",
         "Christopher Hughes",
@@ -61,7 +60,6 @@
         "Christoph Aistleitner",
         "Dean Kulik",
         "Greg Martin",
-        "Ramachandra, K.",
         "shifa liu",
         "Christian Weiß",
         "Emanuel Carneiro",
@@ -109,13 +107,15 @@
         "Anthony W. Eckert",
         "Nitin Saxena",
         "SungGil Lee",
-        "A. Perelli"
+        "A. Perelli",
+        "Asset Durmagambetov",
+        "Louis-Pierre Arguin"
       ]
     },
     {
       "file": "11_top100_north_america.png",
-      "stated_count": 26,
-      "drawn_count": 26,
+      "stated_count": 27,
+      "drawn_count": 27,
       "match": true,
       "names": [
         "Alexandru Zaharescu",
@@ -143,20 +143,20 @@
         "YING ZHANG",
         "André LeClair",
         "Parker Emmerson",
-        "Brad Rodgers"
+        "Brad Rodgers",
+        "Louis-Pierre Arguin"
       ]
     },
     {
       "file": "12_top100_europe.png",
-      "stated_count": 27,
-      "drawn_count": 27,
+      "stated_count": 26,
+      "drawn_count": 26,
       "match": true,
       "names": [
         "J. P. Keating",
         "H. M. Bui",
         "Nina C. Snaith",
         "Jörn Steuding",
-        "Karatsuba, A. A.",
         "Christopher Hughes",
         "Julio Andrade",
         "M. A. Korolev",
@@ -196,7 +196,6 @@
         "Xian-Jin Li",
         "Takashi Nakamura",
         "JONGMIN CHOI",
-        "Ramachandra, K.",
         "shifa liu",
         "Igor Shparlinski",
         "Liu S",
@@ -215,7 +214,8 @@
         "Jianli Zhang",
         "Sergey Kim",
         "C. Tantisukarom",
-        "Nitin Saxena"
+        "Nitin Saxena",
+        "Asset Durmagambetov"
       ]
     },
     {
