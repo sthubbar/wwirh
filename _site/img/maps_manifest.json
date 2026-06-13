@@ -1,30 +1,23 @@
 {
   "site": "riemann",
   "n_top": 100,
-  "n_placed": 86,
+  "n_placed": 93,
   "n_unplaced_no_geocode": 1,
-  "n_unplaced_no_institution": 13,
+  "n_unplaced_no_institution": 6,
   "unplaced": [
     "#86 Danilo Merlini [CERFIM Locarno]",
-    "#17 Fujii, Akio",
-    "#35 Forrester, P. J.",
     "#37 Hall, R. R.",
-    "#41 Omar, Sami",
     "#43 Pavel Kramarenko-Byrd",
     "#46 Richard Cespedes",
     "#49 Christopher Pompetzki",
-    "#52 Ki, Haseo",
     "#84 Brendan Lynch",
-    "#93 Odžak, Almasa",
-    "#98 Balazard, Michel",
-    "#99 Roy, Arindam",
-    "#100 Turnage-Butterbaugh, Caroline L."
+    "#99 Roy, Arindam"
   ],
   "maps": [
     {
       "file": "10_top100_overview.png",
-      "stated_count": 86,
-      "drawn_count": 86,
+      "stated_count": 93,
+      "drawn_count": 93,
       "match": true,
       "names": [
         "Stephen D. Miller",
@@ -43,6 +36,7 @@
         "David W. Farmer",
         "D. A. Goldston",
         "Masatoshi Suzuki",
+        "Fujii, Akio",
         "Peng Gao",
         "Andrés Chirre",
         "Christopher Hughes",
@@ -60,10 +54,12 @@
         "Frank Morales",
         "Frank Vega",
         "JONGMIN CHOI",
+        "Forrester, P. J.",
         "Christoph Aistleitner",
         "Greg Martin",
         "shifa liu",
         "Christian Weiß",
+        "Omar, Sami",
         "Emanuel Carneiro",
         "Csordas, George",
         "Jeffrey C. Lagarias",
@@ -71,6 +67,7 @@
         "Jerzy Kaczorowski",
         "Igor Shparlinski",
         "Liu S",
+        "Ki, Haseo",
         "Ramūnas Garunkštis",
         "Winston Heap",
         "Kevin Ford",
@@ -109,16 +106,20 @@
         "P. Moree",
         "Brian Conrey",
         "Sergey K. Sekatskii",
+        "Odžak, Almasa",
         "Asif Zaman",
         "Aleksander Simonič",
         "Kristian Seip",
-        "Varga, Richard S."
-      ]
+        "Varga, Richard S.",
+        "Balazard, Michel",
+        "Turnage-Butterbaugh, Caroline L."
+      ],
+      "unplaced_no_geocode_in_region": 1
     },
     {
       "file": "11_top100_north_america.png",
-      "stated_count": 30,
-      "drawn_count": 30,
+      "stated_count": 32,
+      "drawn_count": 32,
       "match": true,
       "names": [
         "Alexandru Zaharescu",
@@ -139,6 +140,7 @@
         "Csordas, George",
         "Jeffrey C. Lagarias",
         "Lapidus, Michel L.",
+        "Ki, Haseo",
         "Kevin Ford",
         "Montgomery, Hugh L.",
         "Ghaith Hiary",
@@ -150,13 +152,15 @@
         "Caroline L. Turnage-Butterbaugh",
         "Brian Conrey",
         "Asif Zaman",
-        "Varga, Richard S."
-      ]
+        "Varga, Richard S.",
+        "Turnage-Butterbaugh, Caroline L."
+      ],
+      "unplaced_no_geocode_in_region": 0
     },
     {
       "file": "12_top100_europe.png",
-      "stated_count": 32,
-      "drawn_count": 32,
+      "stated_count": 34,
+      "drawn_count": 34,
       "match": true,
       "names": [
         "J. P. Keating",
@@ -189,14 +193,17 @@
         "Andrew Pearce-Crump",
         "P. Moree",
         "Sergey K. Sekatskii",
+        "Odžak, Almasa",
         "Aleksander Simonič",
-        "Kristian Seip"
-      ]
+        "Kristian Seip",
+        "Balazard, Michel"
+      ],
+      "unplaced_no_geocode_in_region": 1
     },
     {
       "file": "13_top100_asia.png",
-      "stated_count": 21,
-      "drawn_count": 21,
+      "stated_count": 23,
+      "drawn_count": 23,
       "match": true,
       "names": [
         "Stephen D. Miller",
@@ -204,10 +211,12 @@
         "Ade Irma Suriajaya",
         "Liangyi Zhao",
         "Masatoshi Suzuki",
+        "Fujii, Akio",
         "Peng Gao",
         "Xian-Jin Li",
         "Takashi Nakamura",
         "JONGMIN CHOI",
+        "Forrester, P. J.",
         "shifa liu",
         "Igor Shparlinski",
         "Liu S",
@@ -220,22 +229,25 @@
         "Sergey Kim",
         "C. Tantisukarom",
         "Asset Durmagambetov"
-      ]
+      ],
+      "unplaced_no_geocode_in_region": 0
     },
     {
       "file": "14_top100_other.png",
-      "stated_count": 3,
-      "drawn_count": 3,
+      "stated_count": 4,
+      "drawn_count": 4,
       "match": true,
       "names": [
         "Andrés Chirre",
+        "Omar, Sami",
         "Ebrahim Elsayed",
         "Zeev Rudnick"
-      ]
+      ],
+      "unplaced_no_geocode_in_region": 0
     }
   ],
   "geocode_sources": {
-    "openalex": 49,
-    "legacy_gb_cache": 37
+    "openalex": 55,
+    "legacy_gb_cache": 38
   }
 }
