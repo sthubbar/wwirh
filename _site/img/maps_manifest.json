@@ -1,7 +1,11 @@
 {
   "site": "riemann",
   "n_top": 100,
+  "n_placed": 86,
+  "n_unplaced_no_geocode": 1,
+  "n_unplaced_no_institution": 13,
   "unplaced": [
+    "#86 Danilo Merlini [CERFIM Locarno]",
     "#17 Fujii, Akio",
     "#35 Forrester, P. J.",
     "#37 Hall, R. R.",
@@ -19,8 +23,8 @@
   "maps": [
     {
       "file": "10_top100_overview.png",
-      "stated_count": 87,
-      "drawn_count": 87,
+      "stated_count": 86,
+      "drawn_count": 86,
       "match": true,
       "names": [
         "Stephen D. Miller",
@@ -99,7 +103,6 @@
         "Benjamin Wesolowski",
         "Nobuki Fujimoto",
         "Athanasios Sourmelidis",
-        "Danilo Merlini",
         "Jesse Thorner",
         "Caroline L. Turnage-Butterbaugh",
         "Andrew Pearce-Crump",
@@ -152,8 +155,8 @@
     },
     {
       "file": "12_top100_europe.png",
-      "stated_count": 33,
-      "drawn_count": 33,
+      "stated_count": 32,
+      "drawn_count": 32,
       "match": true,
       "names": [
         "J. P. Keating",
@@ -183,7 +186,6 @@
         "Benjamin Wesolowski",
         "Nobuki Fujimoto",
         "Athanasios Sourmelidis",
-        "Danilo Merlini",
         "Andrew Pearce-Crump",
         "P. Moree",
         "Sergey K. Sekatskii",
@@ -231,5 +233,9 @@
         "Zeev Rudnick"
       ]
     }
-  ]
+  ],
+  "geocode_sources": {
+    "openalex": 49,
+    "legacy_gb_cache": 37
+  }
 }
