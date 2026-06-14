@@ -1,12 +1,11 @@
 {
   "site": "riemann",
   "n_top": 100,
-  "n_placed": 93,
+  "n_placed": 94,
   "n_unplaced_no_geocode": 1,
-  "n_unplaced_no_institution": 6,
+  "n_unplaced_no_institution": 5,
   "unplaced": [
     "#86 Danilo Merlini [CERFIM Locarno]",
-    "#37 Hall, R. R.",
     "#43 Pavel Kramarenko-Byrd",
     "#46 Richard Cespedes",
     "#49 Christopher Pompetzki",
@@ -16,8 +15,8 @@
   "maps": [
     {
       "file": "10_top100_overview.png",
-      "stated_count": 93,
-      "drawn_count": 93,
+      "stated_count": 94,
+      "drawn_count": 94,
       "match": true,
       "names": [
         "Stephen D. Miller",
@@ -56,6 +55,7 @@
         "JONGMIN CHOI",
         "Forrester, P. J.",
         "Christoph Aistleitner",
+        "Hall, R. R.",
         "Greg Martin",
         "shifa liu",
         "Christian Weiß",
@@ -159,8 +159,8 @@
     },
     {
       "file": "12_top100_europe.png",
-      "stated_count": 34,
-      "drawn_count": 34,
+      "stated_count": 35,
+      "drawn_count": 35,
       "match": true,
       "names": [
         "J. P. Keating",
@@ -173,6 +173,7 @@
         "Kamel Mazhouda",
         "Alain Connes",
         "Christoph Aistleitner",
+        "Hall, R. R.",
         "Christian Weiß",
         "Emanuel Carneiro",
         "Jerzy Kaczorowski",
@@ -247,7 +248,7 @@
     }
   ],
   "geocode_sources": {
-    "openalex": 55,
+    "openalex": 56,
     "legacy_gb_cache": 38
   }
 }

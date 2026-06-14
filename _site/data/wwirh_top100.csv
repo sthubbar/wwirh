@@ -35,7 +35,7 @@ rank,name,name_ascii,institution,country,arxiv_rank,openalex_rank,zbmath_rank,ar
 34,JONGMIN CHOI,JONGMIN CHOI,Chungbuk National University,KR,,3,,,46,10,,,,2026,2026,,,,
 35,"Forrester, P. J.","Forrester, P. J.",University of Melbourne,AU,,,33,,1,0,,,,2026,2026,,,,
 36,Christoph Aistleitner,Christoph Aistleitner,Graz University of Technology,AT,32,,,12,1,10,,15,openalex,2021,2021,,,,
-37,"Hall, R. R.","Hall, R. R.",,,,,25,2,,,,,,2023,2025,,,,
+37,"Hall, R. R.","Hall, R. R.",University of York,GB,,,25,2,,,,,,2023,2025,,,,
 38,Greg Martin,Greg Martin,University of British Columbia,CA,73,,26,13,1,0,,,,1998,2025,,,,
 39,shifa liu,shifa liu,Peking University,CN,,6,,5,19,25,,,,2025,2025,,,,
 40,Christian Weiß,Christian Weiss,Helmut Schmidt University,DE,36,,,12,1,2,,41,openalex,2023,2023,,,,
