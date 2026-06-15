@@ -59,7 +59,7 @@
 </table>
 <script>
 $(document).ready(function() {
-  $('#rl').DataTable({ pageLength: 25, lengthMenu: [15, 25, 50], order: [[0, 'asc']] });
+  $('#rl').DataTable({ paging: false, info: false, lengthChange: false, searching: false, order: [[0, 'asc']] });
 });
 </script>
 
@@ -70,21 +70,21 @@ Results are filtered to the Mathematics field (OpenAlex field 26) and ranked by 
 <table id="mc" class="display compact stripe hover" style="width:100%">
 <thead><tr><th>#</th><th>Title</th><th>Authors</th><th>Year</th><th>Citations</th></tr></thead>
 <tbody>
-<tr><td style='text-align:center' data-order='1'>1</td><td><a href="https://openalex.org/W2106226212">The Theory of the Riemann Zeta-Function</a></td><td>E. C. Titchmarsh; D. R. Heath‐Brown</td><td>1987</td><td style='text-align:right' data-order='3273'>3,273 citations</td></tr>
-<tr><td style='text-align:center' data-order='2'>2</td><td><a href="https://doi.org/10.1007/978-3-642-58018-5_4">The Riemann Zeta Function</a></td><td>Anatolij A. Karatsuba; Melvyn B. Nathanson</td><td>1992</td><td style='text-align:right' data-order='904'>904 citations</td></tr>
-<tr><td style='text-align:center' data-order='3'>3</td><td><a href="https://doi.org/10.1007/bf02422942">Contributions to the theory of the riemann zeta-function and the theory of the distribution of primes</a></td><td>G. H. Hardy; J. E. Littlewood</td><td>1916</td><td style='text-align:right' data-order='454'>454 citations</td></tr>
-<tr><td style='text-align:center' data-order='4'>4</td><td><a href="https://doi.org/10.1007/978-94-017-2091-5">Limit Theorems for the Riemann Zeta-Function</a></td><td>Antanas Laurinčikas</td><td>1996</td><td style='text-align:right' data-order='376'>376 citations</td></tr>
-<tr><td style='text-align:center' data-order='5'>5</td><td><a href="https://doi.org/10.1070/im1975v009n03abeh001485">THEOREM ON THE “UNIVERSALITY” OF THE RIEMANN ZETA-FUNCTION</a></td><td>Сергей Воронин</td><td>1975</td><td style='text-align:right' data-order='344'>344 citations</td></tr>
-<tr><td style='text-align:center' data-order='6'>6</td><td><a href="https://doi.org/10.1007/s000290050042">Trace formula in noncommutative geometry and the zeros of the Riemann zeta function</a></td><td><a href="people/alain-connes.html"><strong>Alain Connes</strong></a></td><td>1999</td><td style='text-align:right' data-order='342'>342 citations</td></tr>
-<tr><td style='text-align:center' data-order='7'>7</td><td><a href="https://doi.org/10.1090/s0002-9947-1935-1501802-5">Distribution functions and the Riemann zeta function</a></td><td>Børge Jessen; Aurel Wintner</td><td>1935</td><td style='text-align:right' data-order='331'>331 citations</td></tr>
-<tr><td style='text-align:center' data-order='8'>8</td><td><a href="https://doi.org/10.1112/plms/s2-27.1.273">Mean-Value Theorems in the Theory of the Riemann Zeta-Function</a></td><td>A. E. Ingham</td><td>1928</td><td style='text-align:right' data-order='277'>277 citations</td></tr>
-<tr><td style='text-align:center' data-order='9'>9</td><td><a href="https://doi.org/10.1090/jams/860">Decoupling, exponential sums and the Riemann zeta function</a></td><td>Jean Bourgain</td><td>2016</td><td style='text-align:right' data-order='264'>264 citations</td></tr>
-<tr><td style='text-align:center' data-order='10'>10</td><td><a href="https://doi.org/10.1017/cbo9780511983399">Spectral Theory of the Riemann Zeta-Function</a></td><td>Yoichi Motohashi</td><td>1997</td><td style='text-align:right' data-order='262'>262 citations</td></tr>
+<tr><td style='text-align:center' data-order='1'>1</td><td><a href="https://openalex.org/W2106226212">The Theory of the Riemann Zeta-Function</a></td><td>E. C. Titchmarsh; D. R. Heath‐Brown</td><td>1987</td><td style='text-align:right' data-order='3273'>3,273</td></tr>
+<tr><td style='text-align:center' data-order='2'>2</td><td><a href="https://doi.org/10.1007/978-3-642-58018-5_4">The Riemann Zeta Function</a></td><td>Anatolij A. Karatsuba; Melvyn B. Nathanson</td><td>1992</td><td style='text-align:right' data-order='904'>904</td></tr>
+<tr><td style='text-align:center' data-order='3'>3</td><td><a href="https://doi.org/10.1007/bf02422942">Contributions to the theory of the riemann zeta-function and the theory of the distribution of primes</a></td><td>G. H. Hardy; J. E. Littlewood</td><td>1916</td><td style='text-align:right' data-order='454'>454</td></tr>
+<tr><td style='text-align:center' data-order='4'>4</td><td><a href="https://doi.org/10.1007/978-94-017-2091-5">Limit Theorems for the Riemann Zeta-Function</a></td><td>Antanas Laurinčikas</td><td>1996</td><td style='text-align:right' data-order='376'>376</td></tr>
+<tr><td style='text-align:center' data-order='5'>5</td><td><a href="https://doi.org/10.1070/im1975v009n03abeh001485">THEOREM ON THE “UNIVERSALITY” OF THE RIEMANN ZETA-FUNCTION</a></td><td>Сергей Воронин</td><td>1975</td><td style='text-align:right' data-order='344'>344</td></tr>
+<tr><td style='text-align:center' data-order='6'>6</td><td><a href="https://doi.org/10.1007/s000290050042">Trace formula in noncommutative geometry and the zeros of the Riemann zeta function</a></td><td><a href="people/alain-connes.html"><strong>Alain Connes</strong></a></td><td>1999</td><td style='text-align:right' data-order='342'>342</td></tr>
+<tr><td style='text-align:center' data-order='7'>7</td><td><a href="https://doi.org/10.1090/s0002-9947-1935-1501802-5">Distribution functions and the Riemann zeta function</a></td><td>Børge Jessen; Aurel Wintner</td><td>1935</td><td style='text-align:right' data-order='331'>331</td></tr>
+<tr><td style='text-align:center' data-order='8'>8</td><td><a href="https://doi.org/10.1112/plms/s2-27.1.273">Mean-Value Theorems in the Theory of the Riemann Zeta-Function</a></td><td>A. E. Ingham</td><td>1928</td><td style='text-align:right' data-order='277'>277</td></tr>
+<tr><td style='text-align:center' data-order='9'>9</td><td><a href="https://doi.org/10.1090/jams/860">Decoupling, exponential sums and the Riemann zeta function</a></td><td>Jean Bourgain</td><td>2016</td><td style='text-align:right' data-order='264'>264</td></tr>
+<tr><td style='text-align:center' data-order='10'>10</td><td><a href="https://doi.org/10.1017/cbo9780511983399">Spectral Theory of the Riemann Zeta-Function</a></td><td>Yoichi Motohashi</td><td>1997</td><td style='text-align:right' data-order='262'>262</td></tr>
 </tbody>
 </table>
 <script>
 $(document).ready(function() {
-  $('#mc').DataTable({ pageLength: 10, lengthMenu: [10, 25], order: [[0, 'asc']] });
+  $('#mc').DataTable({ paging: false, info: false, lengthChange: false, searching: false, order: [[0, 'asc']] });
 });
 </script>
 
