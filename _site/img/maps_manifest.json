@@ -1,27 +1,29 @@
 {
   "site": "riemann",
   "n_top": 100,
-  "n_placed": 89,
-  "n_unplaced_no_geocode": 3,
-  "n_unplaced_no_institution": 8,
+  "n_placed": 87,
+  "n_unplaced_no_geocode": 13,
+  "n_unplaced_no_institution": 0,
   "unplaced": [
+    "#20 Richard Cespedes [-]",
+    "#23 Christopher Pompetzki [-]",
     "#45 Asset Durmagambetov [L. N. Gumilyov Eurasian National University]",
     "#64 Matthew P. Young [Rutgers University]",
-    "#79 Danilo Merlini [CERFIM Locarno]",
-    "#20 Richard Cespedes",
-    "#23 Christopher Pompetzki",
-    "#71 Brendan Lynch",
-    "#81 Giedrius Keraitis",
-    "#92 Radu-Daniel Derscariu",
-    "#96 Sourabh Bhattacharya",
-    "#98 Ye, Yangbo",
-    "#99 Mei Shenglin梅生林"
+    "#71 Brendan Lynch [-]",
+    "#72 Stefano Beltraminelli [-]",
+    "#79 Danilo Merlini [-]",
+    "#81 Giedrius Keraitis [-]",
+    "#90 Aleksander Simonič [University of New South Wales]",
+    "#92 Radu-Daniel Derscariu [-]",
+    "#96 Sourabh Bhattacharya [-]",
+    "#98 Ye, Yangbo [University of Iowa]",
+    "#99 Mei Shenglin梅生林 [-]"
   ],
   "maps": [
     {
       "file": "10_top100_overview.png",
-      "stated_count": 89,
-      "drawn_count": 89,
+      "stated_count": 87,
+      "drawn_count": 87,
       "match": true,
       "names": [
         "J. P. Keating",
@@ -90,7 +92,6 @@
         "André LeClair",
         "Nobuki Fujimoto",
         "Montgomery, Hugh L.",
-        "Stefano Beltraminelli",
         "Brad Rodgers",
         "Jesse Thorner",
         "Brian Conrey",
@@ -106,7 +107,6 @@
         "Yildirim, C. Yalçin",
         "Andrew R. Booker",
         "P. Moree",
-        "Aleksander Simonič",
         "Odžak, Almasa",
         "Asif Zaman",
         "Kristian Seip",
@@ -114,7 +114,7 @@
         "George Csordás",
         "Daniel Fiorilli"
       ],
-      "unplaced_no_geocode_in_region": 3
+      "unplaced_no_geocode_in_region": 13
     },
     {
       "file": "11_top100_north_america.png",
@@ -156,12 +156,12 @@
         "Louis-Pierre Arguin",
         "George Csordás"
       ],
-      "unplaced_no_geocode_in_region": 1
+      "unplaced_no_geocode_in_region": 2
     },
     {
       "file": "12_top100_europe.png",
-      "stated_count": 36,
-      "drawn_count": 36,
+      "stated_count": 34,
+      "drawn_count": 34,
       "match": true,
       "names": [
         "J. P. Keating",
@@ -187,7 +187,6 @@
         "J. Washburn",
         "J. Arias de Reyna",
         "Nobuki Fujimoto",
-        "Stefano Beltraminelli",
         "A. Perelli",
         "Athanasios Sourmelidis",
         "Andrew Pearce-Crump",
@@ -196,12 +195,11 @@
         "Yildirim, C. Yalçin",
         "Andrew R. Booker",
         "P. Moree",
-        "Aleksander Simonič",
         "Odžak, Almasa",
         "Kristian Seip",
         "Daniel Fiorilli"
       ],
-      "unplaced_no_geocode_in_region": 1
+      "unplaced_no_geocode_in_region": 3
     },
     {
       "file": "13_top100_asia.png",
@@ -226,7 +224,7 @@
         "C. Tantisukarom",
         "Oussama Basta"
       ],
-      "unplaced_no_geocode_in_region": 1
+      "unplaced_no_geocode_in_region": 2
     },
     {
       "file": "14_top100_other.png",
@@ -239,11 +237,11 @@
         "Omar, Sami",
         "Zeev Rudnick"
       ],
-      "unplaced_no_geocode_in_region": 0
+      "unplaced_no_geocode_in_region": 6
     }
   ],
   "geocode_sources": {
     "legacy_gb_cache": 42,
-    "openalex": 47
+    "openalex": 45
   }
 }
