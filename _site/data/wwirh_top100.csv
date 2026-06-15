@@ -61,7 +61,7 @@ rank,name,name_ascii,institution,country,arxiv_rank,openalex_rank,zbmath_rank,ar
 60,Ebrahim Elsayed,Ebrahim Elsayed,Mansoura University,EG,,22,,,9,0,,,,2026,2026,,,,
 61,Koji Chinen,Koji Chinen,Kindai University,JP,118,20,,7,9,30,,5,openalex,2007,2021,,,,
 62,Zeev Rudnick,Zeev Rudnick,Tel Aviv University,IL,37,,62,17,,,,32,openalex,2009,2025,,,,
-63,Xian-Jin Li,Xian-Jin Li,Brigham Young University,US,,,44,5,,,,15,openalex,1998,2006,,,,
+63,Xian-Jin Li,Xian-Jin Li,Brigham Young University,US,,,44,5,,,,,,1998,2006,,,,
 64,Christian Weiß,Christian Weiss,Helmut Schmidt University,DE,35,,,12,1,2,,41,openalex,2023,2023,,,,
 65,André LeClair,Andre LeClair,Cornell University,US,29,,97,17,,,,24,openalex,2015,2024,,,,
 66,J. Maurice Rojas,J. Maurice Rojas,City University of Hong Kong,HK,175,12,,8,13,57,,14,openalex,1998,2017,,,,
