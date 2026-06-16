@@ -1,13 +1,12 @@
 {
   "site": "riemann",
   "n_top": 100,
-  "n_placed": 87,
-  "n_unplaced_no_geocode": 13,
+  "n_placed": 88,
+  "n_unplaced_no_geocode": 12,
   "n_unplaced_no_institution": 0,
   "unplaced": [
     "#38 Asset Durmagambetov [L. N. Gumilyov Eurasian National University]",
     "#60 Giedrius Keraitis [-]",
-    "#71 Matthew P. Young [Rutgers University]",
     "#72 Stefano Beltraminelli [-]",
     "#75 Radu-Daniel Derscariu [-]",
     "#77 Danilo Merlini [-]",
@@ -22,8 +21,8 @@
   "maps": [
     {
       "file": "10_top100_overview.png",
-      "stated_count": 87,
-      "drawn_count": 87,
+      "stated_count": 88,
+      "drawn_count": 88,
       "match": true,
       "names": [
         "J. Brian Conrey",
@@ -94,6 +93,7 @@
         "Xian-Jin Li",
         "J. Arias de Reyna",
         "Ghaith Hiary",
+        "Matthew P. Young",
         "Brian Conrey",
         "A. Perelli",
         "Jesse Thorner",
@@ -114,12 +114,12 @@
         "Fuchuan Wei",
         "Bombieri, E."
       ],
-      "unplaced_no_geocode_in_region": 13
+      "unplaced_no_geocode_in_region": 12
     },
     {
       "file": "11_top100_north_america.png",
-      "stated_count": 33,
-      "drawn_count": 33,
+      "stated_count": 34,
+      "drawn_count": 34,
       "match": true,
       "names": [
         "J. Brian Conrey",
@@ -147,6 +147,7 @@
         "Brad Rodgers",
         "Xian-Jin Li",
         "Ghaith Hiary",
+        "Matthew P. Young",
         "Brian Conrey",
         "Jesse Thorner",
         "Turnage-Butterbaugh, Caroline L.",
@@ -156,7 +157,7 @@
         "Louis-Pierre Arguin",
         "Bombieri, E."
       ],
-      "unplaced_no_geocode_in_region": 2
+      "unplaced_no_geocode_in_region": 1
     },
     {
       "file": "12_top100_europe.png",
@@ -242,6 +243,7 @@
   ],
   "geocode_sources": {
     "legacy_gb_cache": 42,
-    "openalex": 45
+    "openalex": 45,
+    "verified:2026-06-15(Claude,web; main campus)": 1
   }
 }
