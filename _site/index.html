@@ -40,15 +40,6 @@
 <p>This site is a reference directory of those people. It catalogs the <strong>Top 100</strong> researchers most active on the Riemann hypothesis and adjacent problems (the critical line, pair correlation of zeros, moments of the zeta function, Dirichlet L-functions, the Selberg class, and the random-matrix connection), and gives their institutions.</p>
 </div>
 
-<h2>How the list is built</h2>
-<p>Three independent signals are combined into one composite ranking:</p>
-<ol>
-<li><strong>arXiv preprint output</strong> since 2003, filtered to the math.NT category and matched against 15 Riemann-hypothesis search terms (<code>Riemann hypothesis</code>, <code>Riemann zeta function</code>, <code>critical line</code>, <code>pair correlation</code>, <code>Dirichlet L-functions</code>, and others).</li>
-<li><strong>OpenAlex topical citations</strong> for the same Riemann-hypothesis phrases, capped at 10 authors per work to keep out physics megapapers.</li>
-<li><strong>zbMATH Open</strong>, the curated mathematics review database, using the two RH-core MSC subject classes (11M26 zeros of zeta and L-functions and the Riemann hypothesis, 11M50 relations with random matrices).</li>
-</ol>
-<p>The pipeline ranks are combined with a weighted order statistic. For each researcher the available ranks are sorted and weighted 70% on the best, 20% on the middle, and 10% on the worst, so being excellent in one Riemann-hypothesis pipeline counts most, while strength across all of them still wins overall. Lower is better. A researcher who appears in only one pipeline is not penalised; a missing rank is estimated from their nearest-ranked neighbours (the 70% weight only ever falls on a real, measured rank, never an estimate). The Riemann hypothesis is heavily an arXiv-preprint field, so the current ranking is dominated by the arXiv signal, with OpenAlex contributing where it overlaps; the zbMATH MSC layer is being folded in. False positives and off-topic authors are excluded by hand; the approach is described in the <a href="methodology.html">methodology</a>.</p>
-
 
 <div class="figure-page">
 <a href="location.html"><img src="img/10_top100_overview.png" alt="World overview map of Top 100 Riemann hypothesis researchers"></a>
@@ -66,6 +57,16 @@
 <li><a href="overlap.html"><strong>Overlap</strong></a>: the researchers who also appear across the related conjecture sites.</li>
 <li><a href="about.html"><strong>About</strong></a>: what this site is, who built it, and where to find the methodology, the open dataset, and how to request a correction.</li>
 </ul>
+
+<h2>How the list is built</h2>
+<p>Three independent signals are combined into one composite ranking:</p>
+<ol>
+<li><strong>arXiv preprint output</strong> since 2003, filtered to the math.NT category and matched against 15 Riemann-hypothesis search terms (<code>Riemann hypothesis</code>, <code>Riemann zeta function</code>, <code>critical line</code>, <code>pair correlation</code>, <code>Dirichlet L-functions</code>, and others).</li>
+<li><strong>OpenAlex topical citations</strong> for the same Riemann-hypothesis phrases, capped at 10 authors per work to keep out physics megapapers.</li>
+<li><strong>zbMATH Open</strong>, the curated mathematics review database, using the two RH-core MSC subject classes (11M26 zeros of zeta and L-functions and the Riemann hypothesis, 11M50 relations with random matrices).</li>
+</ol>
+<p>The pipeline ranks are combined with a weighted order statistic. For each researcher the available ranks are sorted and weighted 70% on the best, 20% on the middle, and 10% on the worst, so being excellent in one Riemann-hypothesis pipeline counts most, while strength across all of them still wins overall. Lower is better. A researcher who appears in only one pipeline is not penalised; a missing rank is estimated from their nearest-ranked neighbours (the 70% weight only ever falls on a real, measured rank, never an estimate). The Riemann hypothesis is heavily an arXiv-preprint field, so the current ranking is dominated by the arXiv signal, with OpenAlex contributing where it overlaps; the zbMATH MSC layer is being folded in. False positives and off-topic authors are excluded by hand; the approach is described in the <a href="methodology.html">methodology</a>.</p>
+
 
 <h2>Citing this site</h2>
 <blockquote>Hubbard, S. (2026). <em>Who's Who in Riemann Hypothesis Research</em>. Zenodo. <a href="https://doi.org/10.5281/zenodo.20674899">https://doi.org/10.5281/zenodo.20674899</a></blockquote>
