@@ -10,13 +10,13 @@
     "#72 Stefano Beltraminelli [-]",
     "#75 Radu-Daniel Derscariu [-]",
     "#77 Danilo Merlini [-]",
-    "#82 Mei Shenglin梅生林 [-]",
-    "#88 Fernando J.O. Louro [-]",
-    "#90 Aleksander Simonič [University of New South Wales]",
-    "#91 Tosho Lazarov Karadzhov [-]",
-    "#93 Carlos Venegas [-]",
-    "#94 Yangbo Ye [University of Iowa]",
-    "#96 Vanni Borz [-]"
+    "#81 Mei Shenglin梅生林 [-]",
+    "#87 Fernando J.O. Louro [-]",
+    "#89 Aleksander Simonič [University of New South Wales]",
+    "#90 Tosho Lazarov Karadzhov [-]",
+    "#92 C. Venegas [-]",
+    "#93 Yangbo Ye [University of Iowa]",
+    "#95 V. Borz [-]"
   ],
   "maps": [
     {
@@ -91,7 +91,7 @@
         "Winston Heap",
         "Brad Rodgers",
         "Xian-Jin Li",
-        "J. Arias de Reyna",
+        "Juan Arias de Reyna",
         "Ghaith Hiary",
         "Matthew P. Young",
         "Brian Conrey",
@@ -100,7 +100,6 @@
         "Athanasios Sourmelidis",
         "Michel Balazard",
         "Andrew Pearce-Crump",
-        "Caroline L. Turnage-Butterbaugh",
         "C. Y. Yildirim",
         "George Csordas",
         "Almasa Odžak",
@@ -112,7 +111,8 @@
         "Daniel Fiorilli",
         "Louis-Pierre Arguin",
         "Fuchuan Wei",
-        "Enrico Bombieri"
+        "Enrico Bombieri",
+        "Nicolas Robles"
       ],
       "unplaced_no_geocode_in_region": 12
     },
@@ -150,12 +150,12 @@
         "Matthew P. Young",
         "Brian Conrey",
         "Jesse Thorner",
-        "Caroline L. Turnage-Butterbaugh",
         "George Csordas",
         "Caroline L. Turnage-Butterbaugh",
         "Asif Zaman",
         "Louis-Pierre Arguin",
-        "Enrico Bombieri"
+        "Enrico Bombieri",
+        "Nicolas Robles"
       ],
       "unplaced_no_geocode_in_region": 1
     },
@@ -187,7 +187,7 @@
         "Alessandro Languasco",
         "Christian Weiß",
         "Winston Heap",
-        "J. Arias de Reyna",
+        "Juan Arias de Reyna",
         "Alberto Perelli",
         "Athanasios Sourmelidis",
         "Michel Balazard",
