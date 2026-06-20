@@ -1,28 +1,23 @@
 {
   "site": "riemann",
   "n_top": 100,
-  "n_placed": 88,
-  "n_unplaced_no_geocode": 12,
+  "n_placed": 93,
+  "n_unplaced_no_geocode": 7,
   "n_unplaced_no_institution": 0,
   "unplaced": [
-    "#26 Asset Durmagambetov [L. N. Gumilyov Eurasian National University]",
     "#45 Giedrius Keraitis [-]",
     "#49 David M. Potts [-]",
-    "#73 Stefano Beltraminelli [-]",
     "#74 Mei Shenglin梅生林 [-]",
-    "#79 Danilo Merlini [-]",
-    "#88 Aleksander Simonič [University of New South Wales]",
     "#91 Fernando J.O. Louro [-]",
     "#93 Tosho Lazarov Karadzhov [-]",
-    "#95 Yangbo Ye [University of Iowa]",
     "#96 C. Venegas [-]",
     "#98 V. Borz [-]"
   ],
   "maps": [
     {
       "file": "10_top100_overview.png",
-      "stated_count": 88,
-      "drawn_count": 88,
+      "stated_count": 93,
+      "drawn_count": 93,
       "match": true,
       "names": [
         "J. Brian Conrey",
@@ -50,6 +45,7 @@
         "Koji Chinen",
         "Andrés Chirre",
         "Akio Fujii",
+        "Asset Durmagambetov",
         "Vorrapan Chandee",
         "Nathan Ng",
         "Julio Andrade",
@@ -94,10 +90,12 @@
         "Matthew P. Young",
         "Hugh Lowell Montgomery",
         "Brian Conrey",
+        "Stefano Beltraminelli",
         "Xian-Jin Li",
         "Alberto Perelli",
         "Athanasios Sourmelidis",
         "Andrew Pearce-Crump",
+        "Danilo Merlini",
         "George Csordas",
         "Michel Balazard",
         "Caroline L. Turnage-Butterbaugh",
@@ -106,15 +104,17 @@
         "Sergey K. Sekatskii",
         "P. Moree",
         "Jesse Thorner",
+        "Aleksander Simonič",
         "Almasa Odžak",
         "Asif Zaman",
         "Kristian Seip",
         "Louis-Pierre Arguin",
+        "Yangbo Ye",
         "Daniel Fiorilli",
         "Nicolas Robles",
         "Gerhard Larcher"
       ],
-      "unplaced_no_geocode_in_region": 12
+      "unplaced_no_geocode_in_region": 7
     },
     {
       "file": "11_top100_north_america.png",
@@ -131,7 +131,6 @@
         "D. A. Goldston",
         "Frank Morales",
         "David W. Farmer",
-        "Frank Vega",
         "Vorrapan Chandee",
         "Nathan Ng",
         "William D. Banks",
@@ -155,20 +154,22 @@
         "Jesse Thorner",
         "Asif Zaman",
         "Louis-Pierre Arguin",
+        "Yangbo Ye",
         "Nicolas Robles"
       ],
-      "unplaced_no_geocode_in_region": 1
+      "unplaced_no_geocode_in_region": 0
     },
     {
       "file": "12_top100_europe.png",
-      "stated_count": 34,
-      "drawn_count": 34,
+      "stated_count": 37,
+      "drawn_count": 37,
       "match": true,
       "names": [
         "J. P. Keating",
         "H. M. Bui",
         "Nina C. Snaith",
         "Jörn Steuding",
+        "Frank Vega",
         "Julio Andrade",
         "J. Washburn",
         "Nobuki Fujimoto",
@@ -188,9 +189,11 @@
         "Youness Lamzouri",
         "Winston Heap",
         "Juan Arias de Reyna",
+        "Stefano Beltraminelli",
         "Alberto Perelli",
         "Athanasios Sourmelidis",
         "Andrew Pearce-Crump",
+        "Danilo Merlini",
         "Michel Balazard",
         "C. Y. Yildirim",
         "Sergey K. Sekatskii",
@@ -200,12 +203,12 @@
         "Daniel Fiorilli",
         "Gerhard Larcher"
       ],
-      "unplaced_no_geocode_in_region": 5
+      "unplaced_no_geocode_in_region": 3
     },
     {
       "file": "13_top100_asia.png",
-      "stated_count": 16,
-      "drawn_count": 16,
+      "stated_count": 18,
+      "drawn_count": 18,
       "match": true,
       "names": [
         "Tim Trudgian",
@@ -217,15 +220,17 @@
         "Liangyi Zhao",
         "Koji Chinen",
         "Akio Fujii",
+        "Asset Durmagambetov",
         "Shekhar Suman",
         "Takashi Nakamura",
         "C. Tantisukarom",
         "J. Maurice Rojas",
         "Oussama Basta",
         "P. J. Forrester",
-        "Yoonbok Lee"
+        "Yoonbok Lee",
+        "Aleksander Simonič"
       ],
-      "unplaced_no_geocode_in_region": 2
+      "unplaced_no_geocode_in_region": 0
     },
     {
       "file": "14_top100_other.png",
@@ -244,6 +249,7 @@
   "geocode_sources": {
     "legacy_gb_cache": 41,
     "openalex": 46,
+    "verified:2026-06-20(Claude,web)": 5,
     "verified:2026-06-15(Claude,web; main campus)": 1
   }
 }
