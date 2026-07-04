@@ -1,23 +1,15 @@
 {
   "site": "riemann",
   "n_top": 100,
-  "n_placed": 93,
-  "n_unplaced_no_geocode": 7,
+  "n_placed": 100,
+  "n_unplaced_no_geocode": 0,
   "n_unplaced_no_institution": 0,
-  "unplaced": [
-    "#37 Darius Šiaučiūnas [Šiauliai University]",
-    "#81 Machiel van Frankenhuijsen [Utah Valley University]",
-    "#82 Mithun Kumar Das [Abdus Salam International Centre for Theoretical Physics]",
-    "#83 Peng-Jie Wong [National Sun Yat-sen University]",
-    "#88 Francesc Fité [University of Barcelona]",
-    "#89 Wenpeng Zhang [Xi'an Technological University]",
-    "#90 Neea Palojärvi [Åbo Akademi University]"
-  ],
+  "unplaced": [],
   "maps": [
     {
       "file": "10_top100_overview.png",
-      "stated_count": 93,
-      "drawn_count": 93,
+      "stated_count": 100,
+      "drawn_count": 100,
       "match": true,
       "names": [
         "J. Brian Conrey",
@@ -56,6 +48,7 @@
         "Kamel Mazhouda",
         "Kevin Ford",
         "Alessandro Languasco",
+        "Darius Šiaučiūnas",
         "Aleksander Simonič",
         "Ján Mózer",
         "Timothy S. Trudgian",
@@ -99,10 +92,16 @@
         "Łukasz Pańkowski",
         "D. R. Heath-Brown",
         "Pranendu Darbar",
+        "Machiel van Frankenhuijsen",
+        "Mithun Kumar Das",
+        "Peng-Jie Wong",
         "Andriy Bondarenko",
         "Winston Heap",
         "Henryk Iwaniec",
         "Kristian Seip",
+        "Francesc Fité",
+        "Wenpeng Zhang",
+        "Neea Palojärvi",
         "Helmut Maier",
         "Eugene B. Bogomolny",
         "Habiba Kadiri",
@@ -114,12 +113,12 @@
         "Alain Connes",
         "Ikuya Kaneko"
       ],
-      "unplaced_no_geocode_in_region": 7
+      "unplaced_no_geocode_in_region": 0
     },
     {
       "file": "11_top100_north_america.png",
-      "stated_count": 38,
-      "drawn_count": 38,
+      "stated_count": 39,
+      "drawn_count": 39,
       "match": true,
       "names": [
         "J. Brian Conrey",
@@ -155,18 +154,19 @@
         "A. M. Odlyzko",
         "Daniel A. Goldston",
         "Siegfred Alan C. Baluyot",
+        "Machiel van Frankenhuijsen",
         "Henryk Iwaniec",
         "Habiba Kadiri",
         "Andrew Granville",
         "Rizwanur Khan",
         "Ikuya Kaneko"
       ],
-      "unplaced_no_geocode_in_region": 1
+      "unplaced_no_geocode_in_region": 0
     },
     {
       "file": "12_top100_europe.png",
-      "stated_count": 39,
-      "drawn_count": 39,
+      "stated_count": 43,
+      "drawn_count": 43,
       "match": true,
       "names": [
         "H. M. Bui",
@@ -184,6 +184,7 @@
         "Emanuel Carneiro",
         "Kamel Mazhouda",
         "Alessandro Languasco",
+        "Darius Šiaučiūnas",
         "Ján Mózer",
         "Juan Arias de Reyna",
         "Christoph Aistleitner",
@@ -200,21 +201,24 @@
         "Łukasz Pańkowski",
         "D. R. Heath-Brown",
         "Pranendu Darbar",
+        "Mithun Kumar Das",
         "Andriy Bondarenko",
         "Winston Heap",
         "Kristian Seip",
+        "Francesc Fité",
+        "Neea Palojärvi",
         "Helmut Maier",
         "Eugene B. Bogomolny",
         "P. Moree",
         "M. A. Korolev",
         "Alain Connes"
       ],
-      "unplaced_no_geocode_in_region": 4
+      "unplaced_no_geocode_in_region": 0
     },
     {
       "file": "13_top100_asia.png",
-      "stated_count": 13,
-      "drawn_count": 13,
+      "stated_count": 15,
+      "drawn_count": 15,
       "match": true,
       "names": [
         "Liangyi Zhao",
@@ -229,9 +233,11 @@
         "Atul Dixit",
         "Kohji Matsumoto",
         "Yoonbok Lee",
+        "Peng-Jie Wong",
+        "Wenpeng Zhang",
         "Zikang Dong"
       ],
-      "unplaced_no_geocode_in_region": 2
+      "unplaced_no_geocode_in_region": 0
     },
     {
       "file": "14_top100_other.png",
@@ -249,7 +255,14 @@
   "geocode_sources": {
     "openalex": 35,
     "legacy_gb_cache": 53,
+    "https://openalex.org/I162380102:mgpschool2026-07-04": 1,
     "verified:2026-06-20(Claude,web)": 3,
-    "verified:2026-06-15(Claude,web; main campus)": 2
+    "verified:2026-06-15(Claude,web; main campus)": 2,
+    "https://openalex.org/I197572798:mgpschool2026-07-04": 1,
+    "https://openalex.org/I12323705:mgpschool2026-07-04": 1,
+    "https://openalex.org/I142974352:mgpschool2026-07-04": 1,
+    "https://openalex.org/I71999127:mgpschool2026-07-04": 1,
+    "https://openalex.org/I4210110558:mgpschool2026-07-04": 1,
+    "https://openalex.org/I130217899:mgpschool2026-07-04": 1
   }
 }
