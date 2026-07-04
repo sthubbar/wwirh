@@ -106,9 +106,8 @@
 </div>
 </details>
 
-<span id="ctryFilterWrapI" style="display:none;margin-right:14px"><label>Country <select id="fltCountryI"><option value="">All</option></select></label></span>
 <table id="institutions" class="display compact stripe hover" style="width:100%">
-<thead><tr><th class="rtcol">#</th><th>Institution</th><th class="rtcol">Ctry</th><th class="rtcol">Top 100</th><th class="rtcol">Training</th><th class="rtcol">Environment</th></tr></thead>
+<thead><tr><th class="rtcol">#</th><th>Institution</th><th class="rtcol" data-dt-order="disable"><select id="fltCountryI" title="Filter by country"><option value="">Ctry</option></select></th><th class="rtcol">Top 100</th><th class="rtcol">Training</th><th class="rtcol">Environment</th></tr></thead>
 <tbody>
 <tr><td class="rtcol">1</td><td title="Ranked researchers here: Nina C. Snaith (#15); Top 100 PhD alumni: H. M. Bui (#2), J. P. Keating (#3), Nina C. Snaith (#15), Christopher Hughes (#29)"><a href="http://bristol.ac.uk/">University of Bristol</a></td><td class="rtcol">GB</td><td class="rtcol" data-order="1">1</td><td class="rtcol" data-order="1.0">1.00</td><td class="rtcol" data-order="0.560905310251403">0.56</td></tr>
 <tr><td class="rtcol">2</td><td title="Ranked researchers here: Hugh Lowell Montgomery (#42), Jeffrey C. Lagarias (#57); Top 100 PhD alumni: J. Brian Conrey (#1), Steven M. Gonek (#7), Greg Martin (#28), Rizwanur Khan (#98)"><a href="https://www.umich.edu">University of Michigan</a></td><td class="rtcol">US</td><td class="rtcol" data-order="2">2</td><td class="rtcol" data-order="0.7605633802816901">0.76</td><td class="rtcol" data-order="0.45257764192763233">0.45</td></tr>
@@ -215,15 +214,16 @@
 $(document).ready(function() {
   var itable = $('#institutions').DataTable({
     pageLength: 25,
-    lengthMenu: [25, 50, 100],
+    lengthMenu: [[25, 50, 100], ['25 per page', '50 per page', '100 per page']],
+    language: { lengthMenu: '_MENU_' },
     order: [[0, 'asc']],
     autoWidth: false,
     columnDefs: [{ targets: [3, 4, 5], orderSequence: ['desc', 'asc'] }]
   });
-  // Country filter in the toolbar row, same level as the length selector
-  // and the search box (Steve 2026-07-04).
-  $('#ctryFilterWrapI').css('display','inline-flex').insertBefore(
-    $('#institutions').closest('.dt-container').find('div.dt-search').first());
+  // Experiment 2 (Steve 2026-07-04): the Ctry header IS the filter; the
+  // first option "Ctry" is the all-countries state. Column 2 ordering is
+  // disabled so opening the dropdown never triggers a sort.
+  $('#fltCountryI').on('click', function (e) { e.stopPropagation(); });
   function istrip(d) { return $('<div>').html(d == null ? '' : d).text().trim(); }
   var seen = {};
   itable.column(2).data().each(function (d) { var t = istrip(d); if (t) seen[t] = 1; });
