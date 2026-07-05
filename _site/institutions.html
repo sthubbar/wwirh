@@ -40,15 +40,11 @@
    at right:3px, so text never touches the indicator. Data cells keep their
    own tighter padding below. */
 #top100tbl thead th,#institutions thead th{padding-right:24px;}
-/* Ctry in-header filter whitespace experiments (Steve 2026-07-04, pick one):
-   Top 100 = experiment A: the filter cell drops all reserved padding so the
-   blank space right of the box disappears; the box keeps its natural size.
-   Institutions = experiment B: same padding cut PLUS the select grows to
-   fill the header vertically (larger font + inner padding), so the box
-   hugs the cell on all sides while the header row height is unchanged. */
+/* Ctry in-header filter (Steve 2026-07-04 final): tight cell padding, and
+   the select carries DataTables' own dt-input class so its height exactly
+   matches the search box and the per-page selector above the table. */
 #top100tbl thead th.ctry-th,#institutions thead th.ctry-th{padding:2px 3px !important;text-align:center;}
-#top100tbl thead th.ctry-th select{margin:0;}
-#institutions thead th.ctry-th select{margin:0;font-size:1em;padding:4px 2px;}
+#top100tbl thead th.ctry-th select,#institutions thead th.ctry-th select{margin:0;}
 /* Institutions: only 6 columns, so the browser's proportional surplus
    sharing fattened the # and numeric columns and pushed the names right
    (Steve 2026-07-04). Shrink-pin every rtcol column to its content so the
@@ -116,7 +112,7 @@
 </details>
 
 <table id="institutions" class="display compact stripe hover" style="width:100%">
-<thead><tr><th class="rtcol">#</th><th>Institution</th><th class="rtcol ctry-th" data-dt-order="disable"><select id="fltCountryI" title="Filter by country"><option value="">Ctry</option></select></th><th class="rtcol">Top 100</th><th class="rtcol">Training</th><th class="rtcol">Environment</th></tr></thead>
+<thead><tr><th class="rtcol">#</th><th>Institution</th><th class="rtcol ctry-th" data-dt-order="disable"><select id="fltCountryI" class="dt-input" title="Filter by country"><option value="">Ctry</option></select></th><th class="rtcol">Top 100</th><th class="rtcol">Training</th><th class="rtcol">Environment</th></tr></thead>
 <tbody>
 <tr><td class="rtcol">1</td><td title="Ranked researchers here: Nina C. Snaith (#15); Top 100 PhD alumni: H. M. Bui (#2), J. P. Keating (#3), Nina C. Snaith (#15), Christopher Hughes (#29)"><a href="http://bristol.ac.uk/">University of Bristol</a></td><td class="rtcol">GB</td><td class="rtcol" data-order="1">1</td><td class="rtcol" data-order="1.0">1.00</td><td class="rtcol" data-order="0.560905310251403">0.56</td></tr>
 <tr><td class="rtcol">2</td><td title="Ranked researchers here: Hugh Lowell Montgomery (#42), Jeffrey C. Lagarias (#57); Top 100 PhD alumni: J. Brian Conrey (#1), Steven M. Gonek (#7), Greg Martin (#28), Rizwanur Khan (#98)"><a href="https://www.umich.edu">University of Michigan</a></td><td class="rtcol">US</td><td class="rtcol" data-order="2">2</td><td class="rtcol" data-order="0.7605633802816901">0.76</td><td class="rtcol" data-order="0.45257764192763233">0.45</td></tr>
