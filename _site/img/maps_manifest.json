@@ -1,15 +1,17 @@
 {
   "site": "riemann",
   "n_top": 100,
-  "n_placed": 100,
-  "n_unplaced_no_geocode": 0,
+  "n_placed": 99,
+  "n_unplaced_no_geocode": 1,
   "n_unplaced_no_institution": 0,
-  "unplaced": [],
+  "unplaced": [
+    "#100 Eric Saias [Sorbonne University]"
+  ],
   "maps": [
     {
       "file": "10_top100_overview.png",
-      "stated_count": 100,
-      "drawn_count": 100,
+      "stated_count": 99,
+      "drawn_count": 99,
       "match": true,
       "names": [
         "J. Brian Conrey",
@@ -71,7 +73,6 @@
         "Jeffrey C. Lagarias",
         "Almasa Odžak",
         "Matthew P. Young",
-        "Richard S. Varga",
         "Bibekananda Maji",
         "Danilo Merlini",
         "Shōta Inoue",
@@ -113,12 +114,12 @@
         "Alain Connes",
         "Ikuya Kaneko"
       ],
-      "unplaced_no_geocode_in_region": 0
+      "unplaced_no_geocode_in_region": 1
     },
     {
       "file": "11_top100_north_america.png",
-      "stated_count": 39,
-      "drawn_count": 39,
+      "stated_count": 38,
+      "drawn_count": 38,
       "match": true,
       "names": [
         "J. Brian Conrey",
@@ -147,7 +148,6 @@
         "Michel L. Lapidus",
         "Jeffrey C. Lagarias",
         "Matthew P. Young",
-        "Richard S. Varga",
         "Alexandra Florea",
         "Enrico Bombieri",
         "Nicolas Robles",
@@ -213,7 +213,7 @@
         "M. A. Korolev",
         "Alain Connes"
       ],
-      "unplaced_no_geocode_in_region": 0
+      "unplaced_no_geocode_in_region": 1
     },
     {
       "file": "13_top100_asia.png",
@@ -254,7 +254,7 @@
   ],
   "geocode_sources": {
     "openalex": 34,
-    "legacy_gb_cache": 54,
+    "legacy_gb_cache": 53,
     "https://openalex.org/I162380102:mgpschool2026-07-04": 1,
     "verified:2026-06-20(Claude,web)": 3,
     "verified:2026-06-15(Claude,web; main campus)": 2,
