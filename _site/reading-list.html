@@ -48,6 +48,8 @@
    regular weight once a country is selected; in the open list the "Ctry"
    option is bold, the country options regular. */
 #top100tbl thead th.ctry-th,#institutions thead th.ctry-th{padding:2px 3px !important;text-align:center;}
+/* subtle in-header nudge, e.g. "(hover rows for details)" (Steve 2026-07-05) */
+#institutions thead th .hdr-hint{font-weight:400;font-size:0.85em;color:#666;white-space:nowrap;}
 #top100tbl thead th.ctry-th select,#institutions thead th.ctry-th select{margin:0;font-weight:400;}
 #top100tbl thead th.ctry-th select.ctry-all,#institutions thead th.ctry-th select.ctry-all{font-weight:700;}
 #top100tbl thead th.ctry-th select option,#institutions thead th.ctry-th select option{font-weight:400;}
@@ -102,7 +104,7 @@
 <p>Showing 15 papers, ranked by the Top 100 standing of their authors then by recency. Authors who appear in the Top 100 are shown in bold.</p>
 
 <table id="rl" class="display compact stripe hover" style="width:100%">
-<thead><tr><th>#</th><th>Title</th><th>Authors</th><th>Published</th><th>Best rank</th></tr></thead>
+<thead><tr><th title="Position in this list">#</th><th title="The paper; click to read it">Title</th><th title="Authors; ranked Top 100 authors link to their profiles">Authors</th><th title="Publication date">Published</th><th title="The best Top 100 rank among the paper's authors">Best rank</th></tr></thead>
 <tbody>
 <tr><td style='text-align:center' data-order='1'>1</td><td><a href="https://arxiv.org/abs/2508.11108v1">Short mollifiers of the Riemann zeta-function</a></td><td><a href="people/j-brian-conrey.html"><strong>J. Brian Conrey</strong></a>, <a href="people/david-w-farmer.html"><strong>David W. Farmer</strong></a>, Chung-Hang Kwan, Yongxiao Lin, <a href="people/caroline-l-turnage-butterbaugh.html"><strong>Caroline L. Turnage-Butterbaugh</strong></a></td><td>2025-08</td><td style='text-align:center' data-order='1'>#1</td></tr>
 <tr><td style='text-align:center' data-order='2'>2</td><td><a href="https://arxiv.org/abs/2605.21221v1">Binomial coefficients with divisors avoiding an interval</a></td><td><a href="people/h-m-bui.html"><strong>Hung M. Bui</strong></a>, Kyle Pratt, <a href="people/alexandru-zaharescu.html"><strong>Alexandru Zaharescu</strong></a></td><td>2026-05</td><td style='text-align:center' data-order='2'>#2</td></tr>
@@ -133,7 +135,7 @@ Results are filtered to the Mathematics field (OpenAlex field 26) and ranked by 
 <p class="muted">The Top 100 ranking is designed to capture prominent, currently active researchers. If an author in this table is not linked to a profile, it is usually because they are deceased or less active than the researchers in the ranking, not because they are less significant to the field.</p>
 
 <table id="mc" class="display compact stripe hover" style="width:100%">
-<thead><tr><th>#</th><th>Title</th><th>Authors</th><th>Year</th><th>Citations</th></tr></thead>
+<thead><tr><th title="Position by citation count">#</th><th title="The paper; click to find it via Google Scholar">Title</th><th title="Authors; ranked Top 100 authors link to their profiles">Authors</th><th title="Publication year">Year</th><th title="Citation count">Citations</th></tr></thead>
 <tbody>
 <tr><td style='text-align:center' data-order='1'>1</td><td><a href="https://scholar.google.com/scholar?q=The%20Theory%20of%20the%20Riemann%20Zeta-Function">The Theory of the Riemann Zeta-Function</a></td><td><a href="in-memoriam.html#e-c-titchmarsh"><strong>E. C. Titchmarsh</strong></a>; <a href="people/d-r-heath-brown.html"><strong>D. R. Heath‐Brown</strong></a></td><td>1987</td><td style='text-align:right' data-order='3273'>3,273</td></tr>
 <tr><td style='text-align:center' data-order='2'>2</td><td><a href="https://scholar.google.com/scholar?q=The%20Riemann%20Zeta%20Function">The Riemann Zeta Function</a> <a class="doi-link" href="https://doi.org/10.1007/978-3-642-58018-5_4">DOI</a></td><td><a href="in-memoriam.html#anatoly-a-karatsuba"><strong>Anatolij A. Karatsuba</strong></a>; Melvyn B. Nathanson</td><td>1992</td><td style='text-align:right' data-order='904'>904</td></tr>
