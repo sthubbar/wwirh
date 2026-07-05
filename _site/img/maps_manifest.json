@@ -5,7 +5,7 @@
   "n_unplaced_no_geocode": 1,
   "n_unplaced_no_institution": 0,
   "unplaced": [
-    "#100 Eric Saias [Sorbonne University]"
+    "#99 Eric Saias [Sorbonne University]"
   ],
   "maps": [
     {
@@ -38,7 +38,6 @@
         "Vorrapan Chandee",
         "Jerzy Kaczorowski",
         "Christian Weiß",
-        "R. R. Hall",
         "Youness Lamzouri",
         "P. J. Forrester",
         "Greg Martin",
@@ -112,14 +111,15 @@
         "M. A. Korolev",
         "Rizwanur Khan",
         "Alain Connes",
-        "Ikuya Kaneko"
+        "Ikuya Kaneko",
+        "Xiannan Li"
       ],
       "unplaced_no_geocode_in_region": 1
     },
     {
       "file": "11_top100_north_america.png",
-      "stated_count": 38,
-      "drawn_count": 38,
+      "stated_count": 39,
+      "drawn_count": 39,
       "match": true,
       "names": [
         "J. Brian Conrey",
@@ -159,14 +159,15 @@
         "Habiba Kadiri",
         "Andrew Granville",
         "Rizwanur Khan",
-        "Ikuya Kaneko"
+        "Ikuya Kaneko",
+        "Xiannan Li"
       ],
       "unplaced_no_geocode_in_region": 0
     },
     {
       "file": "12_top100_europe.png",
-      "stated_count": 43,
-      "drawn_count": 43,
+      "stated_count": 42,
+      "drawn_count": 42,
       "match": true,
       "names": [
         "H. M. Bui",
@@ -177,7 +178,6 @@
         "Alberto Perelli",
         "Jerzy Kaczorowski",
         "Christian Weiß",
-        "R. R. Hall",
         "Youness Lamzouri",
         "Christopher Hughes",
         "Athanasios Sourmelidis",
