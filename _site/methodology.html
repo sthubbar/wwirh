@@ -146,6 +146,17 @@
 <li><strong>Adjacent topics.</strong> The list covers the Riemann hypothesis and adjacent problems, so some of the 100 work mainly on related questions (pair correlation of zeros, moments of the zeta function, Dirichlet L-functions, the Selberg class, the random-matrix connection) rather than on the Riemann hypothesis directly. Title-weighting reduces, but does not eliminate, the appearance of researchers whose connection to the hypothesis itself is incidental.</li>
 </ul>
 
+<h2>Sources of error</h2>
+<ul>
+<li><strong>Surname matching is fragile.</strong> Mathematicians with common surnames may be conflated. The pipeline handles the worst cases but misses are possible.</li>
+<li><strong>Citation counts are influenced by adjacent fields.</strong> Riemann-hypothesis work overlaps with random matrix theory, analytic number theory, and mathematical physics, so a researcher whose work bridges those fields may rank higher purely because those fields cite more. The OpenAlex term <code>random matrix</code> in particular pulls in wireless and signal-processing engineers, so it is excluded from the OpenAlex queries.</li>
+<li><strong>Coverage is biased toward digital publishing.</strong> The Riemann hypothesis is a heavily arXiv-based field, which the pipeline indexes well, but some senior figures who publish mainly in journals are undercounted, and the zbMATH MSC layer that corrects for this is still being integrated.</li>
+<li><strong>The Top 100 is not a verdict.</strong> It is a starting point. Use it alongside MathSciNet, your advisor, and your own reading.</li>
+</ul>
+
+<h2>Acknowledgments</h2>
+<p>Data sources: <a href="https://arxiv.org">arXiv</a>, <a href="https://openalex.org">OpenAlex</a>, <a href="https://zbmath.org">zbMATH Open</a>.</p>
+
 </main>
 <footer>
 <p>Maintained by Steve Hubbard (<a href="mailto:admin@wwirh.org">admin@wwirh.org</a>). Data sources: <a href="https://arxiv.org">arXiv</a>, <a href="https://openalex.org">OpenAlex</a>, <a href="https://zbmath.org">zbMATH Open</a>, <a href="https://www.mathgenealogy.org">Mathematics Genealogy Project</a>.</p>
