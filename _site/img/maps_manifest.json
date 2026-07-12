@@ -1,17 +1,18 @@
 {
   "site": "riemann",
   "n_top": 100,
-  "n_placed": 99,
-  "n_unplaced_no_geocode": 1,
+  "n_placed": 98,
+  "n_unplaced_no_geocode": 2,
   "n_unplaced_no_institution": 0,
   "unplaced": [
+    "#83 Winston Heap [-]",
     "#99 Eric Saias [Sorbonne University]"
   ],
   "maps": [
     {
       "file": "10_top100_overview.png",
-      "stated_count": 99,
-      "drawn_count": 99,
+      "stated_count": 98,
+      "drawn_count": 98,
       "match": true,
       "names": [
         "J. Brian Conrey",
@@ -96,7 +97,6 @@
         "Mithun Kumar Das",
         "Peng-Jie Wong",
         "Andriy Bondarenko",
-        "Winston Heap",
         "Henryk Iwaniec",
         "Kristian Seip",
         "Francesc Fité",
@@ -114,7 +114,7 @@
         "Ikuya Kaneko",
         "Xiannan Li"
       ],
-      "unplaced_no_geocode_in_region": 1
+      "unplaced_no_geocode_in_region": 2
     },
     {
       "file": "11_top100_north_america.png",
@@ -165,8 +165,8 @@
     },
     {
       "file": "12_top100_europe.png",
-      "stated_count": 41,
-      "drawn_count": 41,
+      "stated_count": 40,
+      "drawn_count": 40,
       "match": true,
       "names": [
         "H. M. Bui",
@@ -201,7 +201,6 @@
         "Pranendu Darbar",
         "Mithun Kumar Das",
         "Andriy Bondarenko",
-        "Winston Heap",
         "Kristian Seip",
         "Francesc Fité",
         "Neea Palojärvi",
@@ -254,7 +253,7 @@
   ],
   "geocode_sources": {
     "openalex": 33,
-    "legacy_gb_cache": 52,
+    "legacy_gb_cache": 51,
     "verified:web (Claude,2026-07-11)": 3,
     "https://openalex.org/I162380102:mgpschool2026-07-04": 1,
     "verified:2026-06-20(Claude,web)": 3,
