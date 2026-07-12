@@ -118,8 +118,8 @@
     },
     {
       "file": "11_top100_north_america.png",
-      "stated_count": 39,
-      "drawn_count": 39,
+      "stated_count": 38,
+      "drawn_count": 38,
       "match": true,
       "names": [
         "J. Brian Conrey",
@@ -136,7 +136,6 @@
         "Greg Martin",
         "Michael Rubinstein",
         "Kevin Ford",
-        "Haseo Ki",
         "Hugh Lowell Montgomery",
         "George Csordas",
         "Xian-Jin Li",
@@ -166,8 +165,8 @@
     },
     {
       "file": "12_top100_europe.png",
-      "stated_count": 42,
-      "drawn_count": 42,
+      "stated_count": 41,
+      "drawn_count": 41,
       "match": true,
       "names": [
         "H. M. Bui",
@@ -182,7 +181,6 @@
         "Christopher Hughes",
         "Athanasios Sourmelidis",
         "Emanuel Carneiro",
-        "Kamel Mazhouda",
         "Alessandro Languasco",
         "Darius Šiaučiūnas",
         "Ján Mózer",
@@ -217,8 +215,8 @@
     },
     {
       "file": "13_top100_asia.png",
-      "stated_count": 15,
-      "drawn_count": 15,
+      "stated_count": 16,
+      "drawn_count": 16,
       "match": true,
       "names": [
         "Liangyi Zhao",
@@ -228,6 +226,7 @@
         "P. J. Forrester",
         "Aleksander Simonič",
         "Timothy S. Trudgian",
+        "Haseo Ki",
         "Bibekananda Maji",
         "Shōta Inoue",
         "Atul Dixit",
@@ -241,20 +240,22 @@
     },
     {
       "file": "14_top100_other.png",
-      "stated_count": 3,
-      "drawn_count": 3,
+      "stated_count": 4,
+      "drawn_count": 4,
       "match": true,
       "names": [
         "Andrés Chirre",
         "Sami Omar",
+        "Kamel Mazhouda",
         "Zeev Rudnick"
       ],
       "unplaced_no_geocode_in_region": 0
     }
   ],
   "geocode_sources": {
-    "openalex": 34,
-    "legacy_gb_cache": 53,
+    "openalex": 33,
+    "legacy_gb_cache": 52,
+    "verified:web (Claude,2026-07-11)": 3,
     "https://openalex.org/I162380102:mgpschool2026-07-04": 1,
     "verified:2026-06-20(Claude,web)": 3,
     "verified:2026-06-15(Claude,web; main campus)": 2,
@@ -262,7 +263,6 @@
     "https://openalex.org/I12323705:mgpschool2026-07-04": 1,
     "https://openalex.org/I142974352:mgpschool2026-07-04": 1,
     "https://openalex.org/I71999127:mgpschool2026-07-04": 1,
-    "https://openalex.org/I4210110558:mgpschool2026-07-04": 1,
     "https://openalex.org/I130217899:mgpschool2026-07-04": 1
   }
 }
