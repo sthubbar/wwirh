@@ -9,6 +9,34 @@
 <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.min.css">
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://cdn.datatables.net/2.1.8/js/dataTables.min.js"></script>
+<script id="wwi-sort-types">
+/* DASH-ABSOLUTE SORT TYPES, REGISTERED SITE-WIDE (Steve 2026-07-30).
+   These two order types were previously registered inside the Top 100 page's
+   own ready() block, so no other page could use them. Every table that now
+   exposes a sortable numeric column holding an honest dash (In Memoriam Rank,
+   Genealogy PhD year, the source-rank columns) needs them, so they are
+   registered once here, immediately after DataTables loads and before any
+   page script runs. Semantics are unchanged: -asc maps a dash to +Infinity and
+   -desc maps it to -Infinity, so a dash sinks to the BOTTOM in BOTH sort
+   directions. This is the existing mechanism, not a new one. */
+(function () {
+  if (!window.jQuery || !jQuery.fn.dataTable) return;
+  function num(x) { var n = parseFloat(x); return isNaN(n) ? null : n; }
+  var ext = jQuery.fn.dataTable.ext.type.order;
+  ext['dash-abs-asc'] = ext['ysp-abs-asc'] = function (a, b) {
+    var na = (a === '-') ? Infinity : num(a);
+    var nb = (b === '-') ? Infinity : num(b);
+    if (na === null) na = Infinity; if (nb === null) nb = Infinity;
+    return na - nb;
+  };
+  ext['dash-abs-desc'] = ext['ysp-abs-desc'] = function (a, b) {
+    var na = (a === '-') ? -Infinity : num(a);
+    var nb = (b === '-') ? -Infinity : num(b);
+    if (na === null) na = -Infinity; if (nb === null) nb = -Infinity;
+    return nb - na;
+  };
+})();
+</script>
 <meta property="og:title" content="In Memoriam - Who&#x27;s Who in Riemann Hypothesis Research">
 <meta property="og:description" content="A directory of the researchers most active on the Riemann hypothesis, ranked from arXiv preprint output and OpenAlex citation data, with zbMATH MSC classes 11M26 and 11M50 integrated.">
 <meta property="og:type" content="website">
@@ -89,6 +117,30 @@
    the table is wide. nowrap only, so short values stay on one line. (Steve test
    2026-06-30.) */
 #top100tbl th.dt-type-numeric,#top100tbl td.dt-type-numeric,#top100tbl th.num-col,#top100tbl td.num-col,#top100tbl th.rtcol,#top100tbl td.rtcol,#institutions th.dt-type-numeric,#institutions td.dt-type-numeric,#institutions th.num-col,#institutions td.num-col,#institutions th.rtcol,#institutions td.rtcol{white-space:nowrap;}
+/* TABLE-FORMAT STANDARDIZATION (Steve 2026-07-30). The four Top 100 table
+   conventions above were scoped to #top100tbl and #institutions only, so every
+   other table on the site (location / region listings, In Memoriam, Genealogy,
+   Recent papers, Most cited) rendered without them: numeric columns fell back
+   to left alignment, the sort arrow sat in a pocket of trailing whitespace, the
+   header text could touch the arrow, and the leading Rank / # column carried
+   DataTables' full left gutter. The SAME rules are therefore repeated here for
+   EVERY DataTables table on the site, matched on the shared "display" class the
+   engine puts on all of them.
+     1. sort arrow pulled to the column edge (removes the whitespace to its right)
+     2. 24px reserved on every header cell (breathing room before the arrow)
+     3. numeric / rank-like columns (.num-col, .rtcol, auto .dt-type-numeric)
+        right-aligned on BOTH the th and the td, padding-left 4px (this is what
+        removes the left gutter on a leading Rank / # column), so integers,
+        dashes and [bracketed] values all line up under the header
+     4. nowrap on those columns
+   The overlap matrix is explicitly excluded: its header cells are centred
+   site-name columns inside a drawn bracket, with their own padding, and a 24px
+   right reserve would break that centring. */
+table.display:not(.overlap-table) thead th span.dt-column-order{right:3px;}
+table.display:not(.overlap-table) thead th{padding-right:24px;}
+table.display:not(.overlap-table) th.dt-type-numeric,table.display:not(.overlap-table) th.num-col,table.display:not(.overlap-table) th.rtcol{text-align:right;padding-left:4px;padding-right:24px;}
+table.display:not(.overlap-table) td.dt-type-numeric,table.display:not(.overlap-table) td.num-col,table.display:not(.overlap-table) td.rtcol{text-align:right;padding-left:4px;padding-right:4px;}
+table.display:not(.overlap-table) th.dt-type-numeric,table.display:not(.overlap-table) td.dt-type-numeric,table.display:not(.overlap-table) th.num-col,table.display:not(.overlap-table) td.num-col,table.display:not(.overlap-table) th.rtcol,table.display:not(.overlap-table) td.rtcol{white-space:nowrap;}
 .col-glossary{margin:0.2rem 0 0.7rem 0;}
 .col-glossary li{margin:0.12rem 0;}
 .search-count{color:#555;font-size:0.95rem;margin:0.5rem 0 0.6rem 0;}
@@ -116,35 +168,41 @@
 <h1>In Memoriam</h1>
 <p class="subtitle">Researchers in this directory who are no longer with us</p>
 
-<p>The Top 100 and the regional pages list living researchers only, so the directory stays accurate for anyone using it to make contact. This page remembers the 0 key figures from the ranked pool who have passed away (the most highly ranked of the deceased), plus a separate listing of foundational figures whose careers predate the digital publication record our pipeline reads from.</p>
+<p>The Top 100 and the regional pages list living researchers only, so the directory stays accurate for anyone using it to make contact. This page is the one place the directory remembers the 14 figures behind the modern work who have died, 5 of whom also carry a rank in this site's ranked pool.</p>
 
-<h2>Foundational figures</h2>
+<p>This is a curated list, not a computed one. Who appears here is an editorial judgement: a person is listed because their work matters to this problem, and every entry is hand-checked. The Rank column shows the site's composite ranked-pool rank for those who carry one, so the quantitative signal stays visible, but it is a guide to the judgement rather than the thing that decides it. A dash means the person is not in the ranked pool at all, which is the normal case for careers that predate the arXiv and OpenAlex record the pipeline reads from. Sort any column; dashes always sort to the bottom.</p>
 
-<p>The pipeline behind this site ranks researchers whose work appears on arXiv or in OpenAlex, which mostly means careers active from the mid-1990s onward. The names below predate that coverage. Their work is the bedrock on which modern research is built. They are listed by last name; each contribution is noted at the bottom of the page.</p>
 
-<table class="display compact stripe" style="width:100%">
-<colgroup><col style="width:20em"><col style="width:28em"><col style="width:8em"><col></colgroup>
-<thead><tr><th title="The mathematician; click for their profile page">Name</th><th title="Last known affiliation">Institution</th><th title="Country">Country</th><th title="Birth and death years">Years</th></tr></thead>
+<table id="imtbl" class="display compact stripe hover" style="width:100%">
+<colgroup><col style="width:20em"><col style="width:28em"><col style="width:8em"><col><col style="width:6em"></colgroup>
+<thead><tr><th title="The mathematician; click for their profile page">Name</th><th title="Last known affiliation">Institution</th><th title="Country">Country</th><th title="Birth and death years">Years</th><th class="num-col" title="This site's composite ranked-pool rank, where the person carries one; a dash means they are not in the ranked pool. The ranking informs the choice to list someone here; it does not decide it.">Rank</th></tr></thead>
 <tbody>
-<tr id="jean-bourgain"><td><a href="people/jean-bourgain">Jean Bourgain</a></td><td><a href="https://www.ias.edu/">Institute for Advanced Study</a></td><td>US</td><td>1954-2018</td></tr>
-<tr id="g-h-hardy"><td><a href="people/g-h-hardy">G. H. Hardy</a></td><td><a href="https://www.cam.ac.uk">University of Cambridge</a></td><td>GB</td><td>1877-1947</td></tr>
-<tr id="a-e-ingham"><td><a href="people/a-e-ingham">A. E. Ingham</a></td><td><a href="https://www.cam.ac.uk">University of Cambridge</a></td><td>GB</td><td>1900-1967</td></tr>
-<tr id="aleksandar-ivic"><td><a href="people/aleksandar-ivic">Aleksandar Ivić</a></td><td><a href="https://www.bg.ac.rs/en/">University of Belgrade</a></td><td>RS</td><td>1949-2020</td></tr>
-<tr id="borge-jessen"><td><a href="people/borge-jessen">Borge Jessen</a></td><td><a href="https://www.ku.dk">University of Copenhagen</a></td><td>DK</td><td>1907-1993</td></tr>
-<tr id="anatoly-a-karatsuba"><td><a href="people/anatoly-a-karatsuba">Anatoly A. Karatsuba</a></td><td><a href="https://www.mi.ras.ru/">Steklov Mathematical Institute</a></td><td>RU</td><td>1937-2008</td></tr>
-<tr id="j-e-littlewood"><td><a href="people/j-e-littlewood">J. E. Littlewood</a></td><td><a href="https://www.cam.ac.uk">University of Cambridge</a></td><td>GB</td><td>1885-1977</td></tr>
-<tr id="charles-jean-de-la-vallee-poussin"><td><a href="people/charles-jean-de-la-vallee-poussin">Charles-Jean de la Vallée Poussin</a></td><td><a href="https://uclouvain.be">Université catholique de Louvain</a></td><td>BE</td><td>1866-1962</td></tr>
-<tr id="atle-selberg"><td><a href="people/atle-selberg">Atle Selberg</a></td><td><a href="https://www.ias.edu/">Institute for Advanced Study</a></td><td>US</td><td>1917-2007</td></tr>
-<tr id="e-c-titchmarsh"><td><a href="people/e-c-titchmarsh">E. C. Titchmarsh</a></td><td><a href="https://www.ox.ac.uk">University of Oxford</a></td><td>GB</td><td>1899-1963</td></tr>
-<tr id="pal-turan"><td><a href="people/pal-turan">Pál Turán</a></td><td><a href="https://www.elte.hu">Eötvös Loránd University</a></td><td>HU</td><td>1910-1976</td></tr>
-<tr id="richard-s-varga"><td><a href="people/richard-s-varga">Richard S. Varga</a></td><td><a href="http://www.kent.edu/">Kent State University</a></td><td>US</td><td>1928-2022</td></tr>
-<tr id="sergei-voronin"><td><a href="people/sergei-voronin">Sergei Voronin</a></td><td><a href="https://www.mi.ras.ru/">Steklov Mathematical Institute</a></td><td>RU</td><td>1946-1997</td></tr>
-<tr id="aurel-wintner"><td><a href="people/aurel-wintner">Aurel Wintner</a></td><td><a href="https://www.jhu.edu">Johns Hopkins University</a></td><td>US</td><td>1903-1958</td></tr>
+<tr id="jean-bourgain"><td><a href="people/jean-bourgain">Jean Bourgain</a></td><td><a href="https://www.ias.edu/">Institute for Advanced Study</a></td><td class="rtcol">US</td><td>1954-2018</td><td class="num-col" data-order="-">-</td></tr>
+<tr id="g-h-hardy"><td><a href="people/g-h-hardy">G. H. Hardy</a></td><td><a href="https://www.cam.ac.uk">University of Cambridge</a></td><td class="rtcol">GB</td><td>1877-1947</td><td class="num-col" data-order="-">-</td></tr>
+<tr id="a-e-ingham"><td><a href="people/a-e-ingham">A. E. Ingham</a></td><td><a href="https://www.cam.ac.uk">University of Cambridge</a></td><td class="rtcol">GB</td><td>1900-1967</td><td class="num-col" data-order="-">-</td></tr>
+<tr id="aleksandar-ivic"><td><a href="people/aleksandar-ivic">Aleksandar Ivić</a></td><td><a href="https://www.bg.ac.rs/en/">University of Belgrade</a></td><td class="rtcol">RS</td><td>1949-2020</td><td class="num-col" data-order="17">17</td></tr>
+<tr id="borge-jessen"><td><a href="people/borge-jessen">Borge Jessen</a></td><td><a href="https://www.ku.dk">University of Copenhagen</a></td><td class="rtcol">DK</td><td>1907-1993</td><td class="num-col" data-order="-">-</td></tr>
+<tr id="anatoly-a-karatsuba"><td><a href="people/anatoly-a-karatsuba">Anatoly A. Karatsuba</a></td><td><a href="https://www.mi.ras.ru/">Steklov Mathematical Institute</a></td><td class="rtcol">RU</td><td>1937-2008</td><td class="num-col" data-order="21">21</td></tr>
+<tr id="j-e-littlewood"><td><a href="people/j-e-littlewood">J. E. Littlewood</a></td><td><a href="https://www.cam.ac.uk">University of Cambridge</a></td><td class="rtcol">GB</td><td>1885-1977</td><td class="num-col" data-order="-">-</td></tr>
+<tr id="charles-jean-de-la-vallee-poussin"><td><a href="people/charles-jean-de-la-vallee-poussin">Charles-Jean de la Vallée Poussin</a></td><td><a href="https://uclouvain.be">Université catholique de Louvain</a></td><td class="rtcol">BE</td><td>1866-1962</td><td class="num-col" data-order="150">150</td></tr>
+<tr id="atle-selberg"><td><a href="people/atle-selberg">Atle Selberg</a></td><td><a href="https://www.ias.edu/">Institute for Advanced Study</a></td><td class="rtcol">US</td><td>1917-2007</td><td class="num-col" data-order="-">-</td></tr>
+<tr id="e-c-titchmarsh"><td><a href="people/e-c-titchmarsh">E. C. Titchmarsh</a></td><td><a href="https://www.ox.ac.uk">University of Oxford</a></td><td class="rtcol">GB</td><td>1899-1963</td><td class="num-col" data-order="-">-</td></tr>
+<tr id="pal-turan"><td><a href="people/pal-turan">Pál Turán</a></td><td><a href="https://www.elte.hu">Eötvös Loránd University</a></td><td class="rtcol">HU</td><td>1910-1976</td><td class="num-col" data-order="185">185</td></tr>
+<tr id="richard-s-varga"><td><a href="people/richard-s-varga">Richard S. Varga</a></td><td><a href="http://www.kent.edu/">Kent State University</a></td><td class="rtcol">US</td><td>1928-2022</td><td class="num-col" data-order="65">65</td></tr>
+<tr id="sergei-voronin"><td><a href="people/sergei-voronin">Sergei Voronin</a></td><td><a href="https://www.mi.ras.ru/">Steklov Mathematical Institute</a></td><td class="rtcol">RU</td><td>1946-1997</td><td class="num-col" data-order="-">-</td></tr>
+<tr id="aurel-wintner"><td><a href="people/aurel-wintner">Aurel Wintner</a></td><td><a href="https://www.jhu.edu">Johns Hopkins University</a></td><td class="rtcol">US</td><td>1903-1958</td><td class="num-col" data-order="-">-</td></tr>
 </tbody>
 </table>
+<script>
+$(document).ready(function() {
+  $('#imtbl').DataTable({ paging: false, info: false, lengthChange: false,
+    searching: false, order: [[0, 'asc']], autoWidth: false,
+    columnDefs: [{ targets: 4, type: 'dash-abs' }] });
+});
+</script>
 
 
-<h2>Foundational figures: contributions</h2>
+<h2>Contributions</h2>
 <ul>
 <li><strong>Jean Bourgain</strong> (1954-2018): Fields Medalist whose work on exponential sums and the large sieve advanced bounds related to the zeta-function and L-functions</li>
 <li><strong>G. H. Hardy</strong> (1877-1947): With Littlewood, established foundational results on the zeros of the Riemann zeta-function, including infinitely many zeros on the critical line</li>
@@ -161,17 +219,6 @@
 <li><strong>Sergei Voronin</strong> (1946-1997): Proved the universality theorem for the Riemann zeta-function, showing it approximates any non-vanishing analytic function</li>
 <li><strong>Aurel Wintner</strong> (1903-1958): Contributions to analytic number theory and probabilistic number theory bearing on the zeta-function and Dirichlet series</li>
 </ul>
-
-
-<h2>Key figures from ranked pool</h2>
-
-<table class="display compact stripe" style="width:100%">
-<colgroup><col style="width:20em"><col style="width:28em"><col style="width:8em"><col></colgroup>
-<thead><tr><th title="The mathematician; click for their profile page">Name</th><th title="Last known affiliation">Institution</th><th title="Country">Country</th><th title="Birth and death years">Years</th></tr></thead>
-<tbody>
-
-</tbody>
-</table>
 
 
 </main>
