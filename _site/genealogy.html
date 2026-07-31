@@ -86,26 +86,26 @@
    the reading list, Most cited and every region listing are all styled by the
    SAME rule at the SAME specificity. See _table_format_css(). */
 /* 1. sort arrow pulled to the column edge (no trailing whitespace pocket) */
-#gentbl0 thead th span.dt-column-order{right:3px;}
+#gentbl0 thead th span.dt-column-order,#gentbl1 thead th span.dt-column-order,#gentbl2 thead th span.dt-column-order{right:3px;}
 /* 2. 24px reserved on every header cell: breathing room before the arrow */
-#gentbl0 thead th{padding-right:24px;}
+#gentbl0 thead th,#gentbl1 thead th,#gentbl2 thead th{padding-right:24px;}
 /* 3. numeric / rank-like columns right-aligned on th AND td, 4px on the
       left, which is what removes the gutter on a leading Rank / # column */
-#gentbl0 th.dt-type-numeric,#gentbl0 th.num-col,#gentbl0 th.rtcol{text-align:right;padding-left:4px;padding-right:24px;}
-#gentbl0 td.dt-type-numeric,#gentbl0 td.num-col,#gentbl0 td.rtcol{text-align:right;padding-left:4px;padding-right:4px;}
+#gentbl0 th.dt-type-numeric,#gentbl1 th.dt-type-numeric,#gentbl2 th.dt-type-numeric,#gentbl0 th.num-col,#gentbl1 th.num-col,#gentbl2 th.num-col,#gentbl0 th.rtcol,#gentbl1 th.rtcol,#gentbl2 th.rtcol{text-align:right;padding-left:4px;padding-right:24px;}
+#gentbl0 td.dt-type-numeric,#gentbl1 td.dt-type-numeric,#gentbl2 td.dt-type-numeric,#gentbl0 td.num-col,#gentbl1 td.num-col,#gentbl2 td.num-col,#gentbl0 td.rtcol,#gentbl1 td.rtcol,#gentbl2 td.rtcol{text-align:right;padding-left:4px;padding-right:4px;}
 /* 4. nowrap on those columns */
-#gentbl0 th.dt-type-numeric,#gentbl0 th.num-col,#gentbl0 th.rtcol,#gentbl0 td.dt-type-numeric,#gentbl0 td.num-col,#gentbl0 td.rtcol{white-space:nowrap;}
+#gentbl0 th.dt-type-numeric,#gentbl1 th.dt-type-numeric,#gentbl2 th.dt-type-numeric,#gentbl0 th.num-col,#gentbl1 th.num-col,#gentbl2 th.num-col,#gentbl0 th.rtcol,#gentbl1 th.rtcol,#gentbl2 th.rtcol,#gentbl0 td.dt-type-numeric,#gentbl1 td.dt-type-numeric,#gentbl2 td.dt-type-numeric,#gentbl0 td.num-col,#gentbl1 td.num-col,#gentbl2 td.num-col,#gentbl0 td.rtcol,#gentbl1 td.rtcol,#gentbl2 td.rtcol{white-space:nowrap;}
 /* 5. surplus distribution: shrink-pin numeric / rank-like columns to
       their content so Name and Institution absorb the leftover width */
-#gentbl0 th.dt-type-numeric,#gentbl0 th.num-col,#gentbl0 th.rtcol,#gentbl0 td.dt-type-numeric,#gentbl0 td.num-col,#gentbl0 td.rtcol{width:1px;}
+#gentbl0 th.dt-type-numeric,#gentbl1 th.dt-type-numeric,#gentbl2 th.dt-type-numeric,#gentbl0 th.num-col,#gentbl1 th.num-col,#gentbl2 th.num-col,#gentbl0 th.rtcol,#gentbl1 th.rtcol,#gentbl2 th.rtcol,#gentbl0 td.dt-type-numeric,#gentbl1 td.dt-type-numeric,#gentbl2 td.dt-type-numeric,#gentbl0 td.num-col,#gentbl1 td.num-col,#gentbl2 td.num-col,#gentbl0 td.rtcol,#gentbl1 td.rtcol,#gentbl2 td.rtcol{width:1px;}
 /* 6. Ctry in-header filter: tight padding, and the select RIGHT-aligned
       in its header cell so its right edge sits over the right-aligned
       country codes below it whatever width the column ends up with */
-#gentbl0 thead th.ctry-th{padding:2px 3px !important;text-align:right;}
-#gentbl0 thead th.ctry-th select{margin:0;font-weight:400;}
-#gentbl0 thead th.ctry-th select.ctry-all{font-weight:700;}
-#gentbl0 thead th.ctry-th select option{font-weight:400;}
-#gentbl0 thead th.ctry-th select option[value=""]{font-weight:700;}
+#gentbl0 thead th.ctry-th,#gentbl1 thead th.ctry-th,#gentbl2 thead th.ctry-th{padding:2px 3px !important;text-align:right;}
+#gentbl0 thead th.ctry-th select,#gentbl1 thead th.ctry-th select,#gentbl2 thead th.ctry-th select{margin:0;font-weight:400;}
+#gentbl0 thead th.ctry-th select.ctry-all,#gentbl1 thead th.ctry-th select.ctry-all,#gentbl2 thead th.ctry-th select.ctry-all{font-weight:700;}
+#gentbl0 thead th.ctry-th select option,#gentbl1 thead th.ctry-th select option,#gentbl2 thead th.ctry-th select option{font-weight:400;}
+#gentbl0 thead th.ctry-th select option[value=""],#gentbl1 thead th.ctry-th select option[value=""],#gentbl2 thead th.ctry-th select option[value=""]{font-weight:700;}
 </style>
 </head>
 <body>
@@ -134,12 +134,16 @@
 <h2>How the proximity score works</h2>
 <p>We build one graph from the advisor and student trees of all Top 100 researchers. A close relation is an outsider directly tied (as advisor or student) to at least two Top 100 researchers. Each gets a proximity score that sums, over those direct ties, <code>101 minus the connected researcher's rank</code>. Being tied to the top of the list counts for much more than being tied to the bottom. Only direct ties count; people already in the directory and deceased mathematicians are excluded.</p>
 
+<h2>What this crawl covered</h2>
+<p>We crawled the advisor and student trees of the 72 Top 100 researchers who have an entry in the Mathematics Genealogy Project, and every node in those trees was fetched. The remaining 28 of the 100 have no entry in that database, so their lineage cannot be traced and this page cannot speak for them.</p>
+
+
 
 <h2>Level L1</h2>
 <table id="gentbl0" class="display compact stripe hover" style="width:100%">
 <thead><tr><th title="An outsider tied to at least two Top 100 researchers by advisor-student links">Name</th><th title="Where they earned the doctorate, per the Mathematics Genealogy Project">Institution</th><th class="num-col" title="Doctorate year">PhD year</th><th class="num-col" title="How many Top 100 researchers they advised or were advised by">Direct Top 100 ties</th><th class="num-col" title="Sum over ties of 101 minus the tied researcher's rank; ties to the top of the list count most">Proximity score</th></tr></thead>
 <tbody>
-<tr><td><a href="people/hugh-lowell-montgomery">Hugh Lowell Montgomery</a></td><td><a href="https://www.cam.ac.uk">University of Cambridge</a></td><td class="num-col" data-order="1972">1972</td><td class="num-col" data-order="2">2</td><td class="num-col" data-order="93">93</td></tr>
+<tr><td><a href="people/peng-gao">Peng Gao</a></td><td><a href="https://www.umich.edu">University of Michigan</a></td><td class="num-col" data-order="2005">2005</td><td class="num-col" data-order="2">2</td><td class="num-col" data-order="143">143</td></tr>
 </tbody></table>
 <script>
 $(document).ready(function() {
@@ -149,10 +153,40 @@ $(document).ready(function() {
 });
 </script>
 
+<h2>Level L2</h2>
+<table id="gentbl1" class="display compact stripe hover" style="width:100%">
+<thead><tr><th title="An outsider tied to at least two Top 100 researchers by advisor-student links">Name</th><th title="Where they earned the doctorate, per the Mathematics Genealogy Project">Institution</th><th class="num-col" title="Doctorate year">PhD year</th><th class="num-col" title="How many Top 100 researchers they advised or were advised by">Direct Top 100 ties</th><th class="num-col" title="Sum over ties of 101 minus the tied researcher's rank; ties to the top of the list count most">Proximity score</th></tr></thead>
+<tbody>
+<tr><td><a href="people/leo-goldmakher">Leo Goldmakher</a></td><td><a href="https://www.umich.edu">University of Michigan</a></td><td class="num-col" data-order="2009">2009</td><td class="num-col" data-order="2">2</td><td class="num-col" data-order="125">125</td></tr>
+</tbody></table>
+<script>
+$(document).ready(function() {
+  $('#gentbl1').DataTable({ paging: false, info: false, lengthChange: false,
+    searching: false, order: [[4, 'desc']], autoWidth: false,
+    columnDefs: [{ targets: [2, 3, 4], type: 'dash-abs' }] });
+});
+</script>
+
+<h2>Level L3</h2>
+<table id="gentbl2" class="display compact stripe hover" style="width:100%">
+<thead><tr><th title="An outsider tied to at least two Top 100 researchers by advisor-student links">Name</th><th title="Where they earned the doctorate, per the Mathematics Genealogy Project">Institution</th><th class="num-col" title="Doctorate year">PhD year</th><th class="num-col" title="How many Top 100 researchers they advised or were advised by">Direct Top 100 ties</th><th class="num-col" title="Sum over ties of 101 minus the tied researcher's rank; ties to the top of the list count most">Proximity score</th></tr></thead>
+<tbody>
+<tr><td><a href="people/wijit-yangjit">Wijit Yangjit</a></td><td><a href="https://www.umich.edu">University of Michigan</a></td><td class="num-col" data-order="2022">2022</td><td class="num-col" data-order="2">2</td><td class="num-col" data-order="88">88</td></tr>
+</tbody></table>
+<script>
+$(document).ready(function() {
+  $('#gentbl2').DataTable({ paging: false, info: false, lengthChange: false,
+    searching: false, order: [[4, 'desc']], autoWidth: false,
+    columnDefs: [{ targets: [2, 3, 4], type: 'dash-abs' }] });
+});
+</script>
+
 
 <h2>Notes</h2>
 <ul>
-<li><strong>Hugh Lowell Montgomery</strong> (University of Cambridge, 1972): A mathematician (PhD University of Cambridge, 1972) directly tied to 2 Top 100 researchers through advisor-student relationships in the genealogy network.</li>
+<li><strong>Peng Gao</strong> (University of Michigan, 2005): A mathematician (PhD University of Michigan, 2005) directly tied to 2 Top 100 researchers through advisor-student relationships in the genealogy network.</li>
+<li><strong>Leo Goldmakher</strong> (University of Michigan, 2009): A mathematician (PhD University of Michigan, 2009) directly tied to 2 Top 100 researchers through advisor-student relationships in the genealogy network.</li>
+<li><strong>Wijit Yangjit</strong> (University of Michigan, 2022): A mathematician (PhD University of Michigan, 2022) directly tied to 2 Top 100 researchers through advisor-student relationships in the genealogy network.</li>
 </ul>
 
 
