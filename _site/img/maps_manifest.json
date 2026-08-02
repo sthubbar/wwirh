@@ -5,8 +5,8 @@
   "n_unplaced_no_geocode": 2,
   "n_unplaced_no_institution": 0,
   "unplaced": [
-    "#46 Winston Heap [Independent]",
-    "#99 Daniel R. Johnston [University of New South Wales Canberra]"
+    "#47 Winston Heap [Independent]",
+    "#100 Daniel R. Johnston [University of New South Wales Canberra]"
   ],
   "maps": [
     {
@@ -42,6 +42,7 @@
         "Alberto Perelli",
         "Vorrapan Chandee",
         "Christian Weiß",
+        "R. R. Hall",
         "Youness Lamzouri",
         "P. J. Forrester",
         "Athanasios Sourmelidis",
@@ -111,15 +112,14 @@
         "Helmut Maier",
         "Zikang Dong",
         "Habiba Kadiri",
-        "Andrew Granville",
-        "Ikuya Kaneko"
+        "Andrew Granville"
       ],
       "unplaced_no_geocode_in_region": 2
     },
     {
       "file": "11_top100_north_america.png",
-      "stated_count": 37,
-      "drawn_count": 37,
+      "stated_count": 36,
+      "drawn_count": 36,
       "match": true,
       "names": [
         "J. Brian Conrey",
@@ -157,15 +157,14 @@
         "Henryk Iwaniec",
         "Rizwanur Khan",
         "Habiba Kadiri",
-        "Andrew Granville",
-        "Ikuya Kaneko"
+        "Andrew Granville"
       ],
       "unplaced_no_geocode_in_region": 0
     },
     {
       "file": "12_top100_europe.png",
-      "stated_count": 39,
-      "drawn_count": 39,
+      "stated_count": 40,
+      "drawn_count": 40,
       "match": true,
       "names": [
         "H. M. Bui",
@@ -176,6 +175,7 @@
         "Ramūnas Garunkštis",
         "Alberto Perelli",
         "Christian Weiß",
+        "R. R. Hall",
         "Youness Lamzouri",
         "Athanasios Sourmelidis",
         "Christopher Hughes",
@@ -252,8 +252,8 @@
     }
   ],
   "geocode_sources": {
-    "openalex": 33,
-    "legacy_gb_cache": 51,
+    "openalex": 34,
+    "legacy_gb_cache": 50,
     "verified:web (Claude,2026-07-11)": 3,
     "https://openalex.org/I162380102:mgpschool2026-07-04": 1,
     "verified:2026-06-20(Claude,web)": 3,
