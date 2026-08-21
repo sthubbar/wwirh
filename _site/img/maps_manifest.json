@@ -1,18 +1,20 @@
 {
   "site": "riemann",
   "n_top": 100,
-  "n_placed": 98,
-  "n_unplaced_no_geocode": 2,
+  "n_placed": 96,
+  "n_unplaced_no_geocode": 4,
   "n_unplaced_no_institution": 0,
   "unplaced": [
-    "#49 Winston Heap [Independent]",
-    "#99 Daniel R. Johnston [University of New South Wales Canberra]"
+    "#47 Winston Heap [Independent]",
+    "#97 Daniel R. Johnston [University of New South Wales Canberra]",
+    "#99 Eric Saias [Sorbonne University]",
+    "#100 Masami Yoshimoto [-]"
   ],
   "maps": [
     {
       "file": "10_top100_overview.png",
-      "stated_count": 98,
-      "drawn_count": 98,
+      "stated_count": 96,
+      "drawn_count": 96,
       "match": true,
       "names": [
         "J. Brian Conrey",
@@ -45,7 +47,6 @@
         "Alessandro Languasco",
         "Caroline L. Turnage-Butterbaugh",
         "Youness Lamzouri",
-        "R. R. Hall",
         "Greg Martin",
         "P. J. Forrester",
         "Athanasios Sourmelidis",
@@ -61,7 +62,6 @@
         "Hugh Lowell Montgomery",
         "Ghaith Hiary",
         "Christoph Aistleitner",
-        "George Csordas",
         "Jesse Thorner",
         "Zeev Rudnick",
         "Brad Rodgers",
@@ -114,12 +114,12 @@
         "Helmut Maier",
         "Roger Van Peski"
       ],
-      "unplaced_no_geocode_in_region": 2
+      "unplaced_no_geocode_in_region": 4
     },
     {
       "file": "11_top100_north_america.png",
-      "stated_count": 37,
-      "drawn_count": 37,
+      "stated_count": 36,
+      "drawn_count": 36,
       "match": true,
       "names": [
         "J. Brian Conrey",
@@ -140,7 +140,6 @@
         "Kevin Ford",
         "Hugh Lowell Montgomery",
         "Ghaith Hiary",
-        "George Csordas",
         "Jesse Thorner",
         "Brad Rodgers",
         "Xian-Jin Li",
@@ -164,8 +163,8 @@
     },
     {
       "file": "12_top100_europe.png",
-      "stated_count": 39,
-      "drawn_count": 39,
+      "stated_count": 38,
+      "drawn_count": 38,
       "match": true,
       "names": [
         "H. M. Bui",
@@ -178,7 +177,6 @@
         "Alberto Perelli",
         "Alessandro Languasco",
         "Youness Lamzouri",
-        "R. R. Hall",
         "Athanasios Sourmelidis",
         "Christopher Hughes",
         "Emanuel Carneiro",
@@ -208,7 +206,7 @@
         "P. Moree",
         "Helmut Maier"
       ],
-      "unplaced_no_geocode_in_region": 0
+      "unplaced_no_geocode_in_region": 1
     },
     {
       "file": "13_top100_asia.png",
@@ -235,7 +233,7 @@
         "Wenpeng Zhang",
         "Peng-Jie Wong"
       ],
-      "unplaced_no_geocode_in_region": 1
+      "unplaced_no_geocode_in_region": 2
     },
     {
       "file": "14_top100_other.png",
@@ -252,7 +250,7 @@
     }
   ],
   "geocode_sources": {
-    "openalex": 33,
+    "openalex": 31,
     "legacy_gb_cache": 50,
     "verified:web (Claude,2026-07-11)": 4,
     "https://openalex.org/I162380102:mgpschool2026-07-04": 1,
