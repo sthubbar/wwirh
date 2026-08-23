@@ -7,9 +7,9 @@
   "unplaced": [
     "#47 Winston Heap [Independent]",
     "#79 Kohji Matsumoto [Aichi Institute of Technology]",
-    "#97 Daniel R. Johnston [University of New South Wales Canberra]",
+    "#84 Mithun Kumar Das [National Institute of Science Education and Research Bhubaneswar]",
     "#99 Eric Saias [Sorbonne University]",
-    "#100 Masami Yoshimoto [-]"
+    "#100 Masami Yoshimoto [Research Institute for Mathematical Sciences, Kyoto University]"
   ],
   "maps": [
     {
@@ -99,7 +99,6 @@
         "Pranendu Darbar",
         "Machiel van Frankenhuijsen",
         "Łukasz Pańkowski",
-        "Mithun Kumar Das",
         "Andriy Bondarenko",
         "Igor E. Shparlinski",
         "Wenpeng Zhang",
@@ -112,6 +111,7 @@
         "Andrew Granville",
         "P. Moree",
         "Helmut Maier",
+        "Daniel R. Johnston",
         "Roger Van Peski"
       ],
       "unplaced_no_geocode_in_region": 5
@@ -197,14 +197,14 @@
         "Michael Th. Rassias",
         "Pranendu Darbar",
         "Łukasz Pańkowski",
-        "Mithun Kumar Das",
         "Andriy Bondarenko",
         "Valentin Blomer",
         "Francesc Fité",
         "Eugene B. Bogomolny",
         "Neea Palojärvi",
         "P. Moree",
-        "Helmut Maier"
+        "Helmut Maier",
+        "Daniel R. Johnston"
       ],
       "unplaced_no_geocode_in_region": 1
     },
@@ -250,13 +250,12 @@
   ],
   "geocode_sources": {
     "openalex": 31,
-    "legacy_gb_cache": 49,
+    "legacy_gb_cache": 50,
     "verified:web (Claude,2026-07-11)": 4,
     "https://openalex.org/I162380102:mgpschool2026-07-04": 1,
     "verified:2026-06-20(Claude,web)": 3,
     "verified:2026-06-15(Claude,web; main campus)": 2,
     "https://openalex.org/I197572798:mgpschool2026-07-04": 1,
-    "https://openalex.org/I12323705:mgpschool2026-07-04": 1,
     "https://openalex.org/I71999127:mgpschool2026-07-04": 1,
     "https://openalex.org/I142974352:mgpschool2026-07-04": 1,
     "https://openalex.org/I130217899:mgpschool2026-07-04": 1
