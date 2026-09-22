@@ -1,21 +1,20 @@
 {
   "site": "riemann",
   "n_top": 100,
-  "n_placed": 95,
-  "n_unplaced_no_geocode": 5,
+  "n_placed": 96,
+  "n_unplaced_no_geocode": 4,
   "n_unplaced_no_institution": 0,
   "unplaced": [
     "#47 Winston Heap [Independent]",
     "#79 Kohji Matsumoto [Aichi Institute of Technology]",
     "#84 Mithun Kumar Das [National Institute of Science Education and Research Bhubaneswar]",
-    "#99 Eric Saias [Sorbonne University]",
     "#100 Masami Yoshimoto [Research Institute for Mathematical Sciences, Kyoto University]"
   ],
   "maps": [
     {
       "file": "10_top100_overview.png",
-      "stated_count": 95,
-      "drawn_count": 95,
+      "stated_count": 96,
+      "drawn_count": 96,
       "match": true,
       "names": [
         "J. Brian Conrey",
@@ -112,9 +111,10 @@
         "P. Moree",
         "Helmut Maier",
         "Daniel R. Johnston",
-        "Roger Van Peski"
+        "Roger Van Peski",
+        "Eric Saias"
       ],
-      "unplaced_no_geocode_in_region": 5
+      "unplaced_no_geocode_in_region": 4
     },
     {
       "file": "11_top100_north_america.png",
@@ -163,8 +163,8 @@
     },
     {
       "file": "12_top100_europe.png",
-      "stated_count": 38,
-      "drawn_count": 38,
+      "stated_count": 39,
+      "drawn_count": 39,
       "match": true,
       "names": [
         "H. M. Bui",
@@ -204,9 +204,10 @@
         "Neea Palojärvi",
         "P. Moree",
         "Helmut Maier",
-        "Daniel R. Johnston"
+        "Daniel R. Johnston",
+        "Eric Saias"
       ],
-      "unplaced_no_geocode_in_region": 1
+      "unplaced_no_geocode_in_region": 0
     },
     {
       "file": "13_top100_asia.png",
@@ -249,11 +250,11 @@
     }
   ],
   "geocode_sources": {
-    "openalex": 31,
-    "legacy_gb_cache": 50,
+    "openalex": 33,
+    "legacy_gb_cache": 46,
+    "verified:2026-06-20(Claude,web)": 6,
     "verified:web (Claude,2026-07-11)": 4,
     "https://openalex.org/I162380102:mgpschool2026-07-04": 1,
-    "verified:2026-06-20(Claude,web)": 3,
     "verified:2026-06-15(Claude,web; main campus)": 2,
     "https://openalex.org/I197572798:mgpschool2026-07-04": 1,
     "https://openalex.org/I71999127:mgpschool2026-07-04": 1,
