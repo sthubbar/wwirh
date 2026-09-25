@@ -109,7 +109,7 @@
 <h1>Methodology</h1>
 <p class="subtitle">How the rankings are built</p>
 
-<p>This page documents how the Top 100 list is constructed, what's in the data, and what's deliberately out. The Riemann-hypothesis ranking uses the same three-source composite design as the sister Goldbach site (arXiv preprint output, OpenAlex topical citations, and zbMATH MSC classifications). The Riemann hypothesis is a heavily arXiv-based field, so the current ranking is built mainly from the arXiv signal, with OpenAlex contributing where it overlaps; the zbMATH MSC layer is being integrated.</p>
+<p>This page documents how the Top 100 list is constructed, what's in the data, and what's deliberately out. The Riemann-hypothesis ranking combines <strong>four ranked sources</strong>. Three measure research <em>activity</em>, the papers a person writes on the topic: arXiv, OpenAlex and zbMATH Open. The fourth measures <em>influence</em>: how often the Riemann hypothesis literature itself cites a person. The same four sources are used on the sister abc conjecture site.</p>
 
 <h2>Data sources</h2>
 
@@ -119,8 +119,15 @@
 <tr><td><strong>arXiv</strong> (math.NT)</td><td>Preprint-level: titles, abstracts, authors, dates, co-author graph</td><td>Biased toward people who post preprints. Senior figures who publish only in journals are undercounted.</td></tr>
 <tr><td><strong>OpenAlex</strong></td><td>Author-level: paper count, citations, affiliations, country</td><td>Concept tagging is noisy in math; surname-only matching can misidentify. The phrase <code>random matrix</code> pulls in wireless and signal-processing engineers, so it is excluded from the OpenAlex queries.</td></tr>
 <tr><td><strong>zbMATH Open</strong></td><td>Curated math review database; canonical author codes; editor-assigned MSC classification (we use the two Riemann-hypothesis-core classes)</td><td>Coverage of older non-Western mathematicians is the best of the three sources; the REST API is gated behind a one-time Terms-of-Use acceptance. This layer is being folded into the ranking.</td></tr>
+<tr><td><strong>Citation influence</strong>, built from OpenAlex and zbMATH</td><td>Influence: how many works in the Riemann hypothesis literature cite a person</td><td>Many works carry no machine-readable reference list; heavily cited textbooks lift their authors.</td></tr>
 </tbody>
 </table>
+
+<h2>The citation-influence source</h2>
+
+<p>Counting a person's own papers measures output, and it cannot see a senior figure whose few papers everyone else builds on. The fourth source counts influence instead. The <strong>Riemann hypothesis literature</strong> is every work in OpenAlex or zbMATH Open whose title, abstract or review says "Riemann hypothesis": 21,172 works in the September 2026 build. A person's influence is the number of those works that cite them, counting each work once per person, by a linked reference to a paper they wrote, by an unlinked reference identified from the author names in the reference text, or by naming them as the source of a result, as in "Montgomery's pair correlation conjecture".</p>
+
+<p>Self-citations never count. To keep out crank proof announcements, a citing work counts only if zbMATH reviewed it, someone has cited it, or it carries a reference list. A person needs at least 3 citing works to be ranked on this source. This source is why senior figures such as Montgomery, Iwaniec, Odlyzko, Sarnak and Bombieri now rank near the researchers most active today.</p>
 
 <h2>Pipeline</h2>
 
@@ -133,7 +140,7 @@
 
 <li><strong>zbMATH pull</strong>: documents tagged with either of the two Riemann-hypothesis-core MSC classes, 11M26 (zeros of zeta and L-functions and the Riemann hypothesis) or 11M50 (relations of the zeta function with random matrices and physics). The editor-assigned MSC classes correct a systematic gap in the other sources: pre-1995 number theorists and specialists who publish in journals with sparse arXiv presence. This pull is in progress and is being folded into the merged ranking.</li>
 
-<li><strong>Merge and scoring</strong>: the rankings are surname-deduplicated and joined. The available ranks are combined with a <strong>weighted order statistic</strong>: each researcher's ranks are sorted and weighted <code>0.70</code> on the best, <code>0.20</code> on the middle, and <code>0.10</code> on the worst. Sorting before weighting means the method rewards excellence in any one Riemann-hypothesis pipeline (a researcher who is top in zbMATH but absent from arXiv would still score well), while a researcher strong across all of them still finishes ahead. Lower combined score ranks higher. An earlier design simply summed the ranks, which punished anyone outstanding in one source but weak in another; the weighted order statistic fixes that.</li>
+<li><strong>Merge and scoring</strong>: the four rankings, three activity sources and citation influence, are surname-deduplicated and joined. The available ranks are combined with a <strong>weighted order statistic</strong>: each researcher's ranks are sorted and weighted <code>0.70</code> on the best, <code>0.20</code> on the next, and <code>0.10</code> on the third. Sorting before weighting means the method rewards excellence in any one Riemann-hypothesis pipeline (a researcher who is top in zbMATH but absent from arXiv would still score well), while a researcher strong across all of them still finishes ahead. Lower combined score ranks higher. An earlier design simply summed the ranks, which punished anyone outstanding in one source but weak in another; the weighted order statistic fixes that.</li>
 
 <li><strong>Estimating a missing rank (interpolation)</strong>: a researcher ranked by only one of the pipelines is not given a flat penalty. To estimate a missing rank, we order the whole pool by a pipeline the researcher does appear in, then walk outward to the <strong>two nearest researchers above and the two nearest below</strong> who carry a real rank in the missing pipeline, and average those (up to four) values. One rule protects the scoring: the <code>0.70</code> top weight may only land on a <em>measured</em> rank, so an estimate can support a researcher's score but can never be their headline signal. Estimated ranks show in [square brackets] on the Top 100 table; measured ranks show plain.</li>
 
@@ -150,7 +157,7 @@
 <h2>What's not in this list</h2>
 <ul>
 <li><strong>Researchers without a strong digital footprint.</strong> The pipeline indexes arXiv well and OpenAlex moderately, so figures who publish mainly in journals are undercounted until the zbMATH MSC layer is fully integrated.</li>
-<li><strong>Subjective importance.</strong> A theorist whose entire body of Riemann-hypothesis work is one influential paper may rank lower than a productive researcher with many adjacent papers. We rank by output, not by depth.</li>
+<li><strong>A verdict on importance.</strong> The citation-influence source brings the list closer to what specialists would name than counting papers alone, but it is still a count, not a judgment.</li>
 <li><strong>Adjacent topics.</strong> The list covers the Riemann hypothesis and adjacent problems, so some of the 100 work mainly on related questions (pair correlation of zeros, moments of the zeta function, Dirichlet L-functions, the Selberg class, the random-matrix connection) rather than on the Riemann hypothesis directly. Title-weighting reduces, but does not eliminate, the appearance of researchers whose connection to the hypothesis itself is incidental.</li>
 </ul>
 
