@@ -63,7 +63,7 @@ rank,name,name_ascii,institution,country,arxiv_rank,openalex_rank,zbmath_rank,ar
 62,Harold M. Stark,Harold M. Stark,"University of California, San Diego",US,,,,,1,40,,7,openalex,1967,1967,,,,
 63,Matthew P. Young,Matthew P. Young,Rutgers University,US,19,124,132,24,20,523,,15,openalex,2004,2026,,,,
 64,Patrick Solé,Patrick Sole,Télécom Paris,FR,138,,139,8,9,219,,42,openalex,2006,2026,,,,
-65,Takashi Nakamura,Takashi Nakamura,Tokyo University of Science,JP,41,61,16,14,29,100,,12,openalex,2008,2026,,,,
+65,Takashi Nakamura,Takashi Nakamura,Tokyo University of Science,JP,41,61,16,14,29,100,,15,people_csv,2008,2026,,,,
 66,Wenzhi Luo,Wenzhi Luo,The Ohio State University,US,,,,1,5,410,,18,openalex,1999,2005,,,,
 67,M. N. Huxley,M. N. Huxley,Cardiff University,GB,,,,2,21,735,,,,1970,2024,,,,
 68,Michel Balazard,Michel Balazard,Centre National de la Recherche Scientifique,FR,,,44,4,4,44,,,,1998,2021,,,,
